@@ -1,619 +1,2076 @@
+`html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ظ…ظ†طµظˆط±ظ‡ ط§غŒط²ط¯غŒ â€” ط³ع©ط³ طھط±ط§ظ¾غŒط³طھ ظˆ ط±ظˆط§ظ†â€Œط¯ط±ظ…ط§ظ†ع¯ط±</title>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root {
-  --purple: #7c3aed;
-  --purple-light: #a855f7;
-  --purple-pale: #f3e8ff;
-  --purple-mid: #ede9fe;
-  --gold: #b7862a;
-  --dark: #1f1235;
-  --gray: #6b7280;
-  --gray-light: #f9fafb;
-  --white: #ffffff;
-  --radius: 16px;
-  --shadow: 0 4px 24px rgba(124,58,237,.12);
-  --shadow-lg: 0 8px 40px rgba(124,58,237,.18);
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Vazirmatn', sans-serif; color: var(--dark); background: var(--white); overflow-x: hidden; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="وب‌سايت منصوره ايزدي، سکس تراپيست و روان‌درمانگر؛ ارائه خدمات تخصصي سکس تراپي فردي و زوجين، روان‌درماني و مشاوره پيش از ازدواج.">
+  <meta name="theme-color" content="#7c3aed">
 
-/* â”€â”€ NAVBAR â”€â”€ */
-nav {
-  position: fixed; top: 0; right: 0; left: 0; z-index: 100;
-  background: rgba(255,255,255,.95); backdrop-filter: blur(12px);
-  border-bottom: 1px solid #ede9fe;
-  padding: 0 2rem; height: 70px;
-  display: flex; align-items: center; justify-content: space-between;
-  box-shadow: 0 2px 16px rgba(124,58,237,.07);
-}
-.nav-logo { display: flex; align-items: center; gap: .75rem; }
-.nav-logo img { height: 48px; object-fit: contain; }
-.nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a { text-decoration: none; color: var(--dark); font-size: 14px; font-weight: 500; transition: color .2s; }
-.nav-links a:hover { color: var(--purple); }
-.nav-cta {
-  background: var(--purple); color: var(--white); border: none;
-  padding: .6rem 1.5rem; border-radius: 25px; font-size: 14px;
-  font-weight: 600; cursor: pointer; font-family: inherit;
-  transition: transform .15s, box-shadow .15s;
-  text-decoration: none; display: inline-block;
-}
-.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(124,58,237,.35); }
-.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-.hamburger span { width: 24px; height: 2px; background: var(--purple); border-radius: 2px; display: block; transition: all .3s; }
-.mobile-menu { display: none; position: fixed; inset: 70px 0 0; background: #fff; z-index: 99; padding: 2rem; flex-direction: column; gap: 1.5rem; }
-.mobile-menu.open { display: flex; }
-.mobile-menu a { text-decoration: none; color: var(--dark); font-size: 16px; font-weight: 500; padding: .75rem 0; border-bottom: 1px solid #f3e8ff; }
+  <title>منصوره ايزدي | سکس تراپيست و روان‌درمانگر</title>
 
-/* â”€â”€ HERO â”€â”€ */
-.hero {
-  min-height: 100vh; padding: 100px 2rem 4rem;
-  background: linear-gradient(135deg, #faf5ff 0%, #ede9fe 40%, #fff 100%);
-  display: flex; align-items: center;
-}
-.hero-inner {
-  max-width: 1100px; margin: 0 auto; width: 100%;
-  display: grid; grid-template-columns: 1fr 420px; gap: 4rem; align-items: center;
-}
-.hero-text {}
-.hero-badge {
-  display: inline-flex; align-items: center; gap: .5rem;
-  background: var(--purple-pale); color: var(--purple);
-  padding: .4rem 1rem; border-radius: 25px; font-size: 13px; font-weight: 600;
-  margin-bottom: 1.5rem;
-}
-.hero-badge::before { content: 'ًںŒ¸'; }
-.hero-title {
-  font-size: clamp(28px, 4vw, 48px); font-weight: 800;
-  line-height: 1.35; margin-bottom: 1.25rem; color: var(--dark);
-}
-.hero-title span { color: var(--purple); }
-.hero-sub {
-  font-size: 16px; color: var(--gray); line-height: 1.8;
-  margin-bottom: 2rem; max-width: 520px;
-}
-.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-.btn-primary {
-  background: var(--purple); color: #fff; padding: .85rem 2rem;
-  border-radius: 30px; font-size: 15px; font-weight: 600;
-  text-decoration: none; display: inline-block;
-  transition: transform .15s, box-shadow .15s;
-  font-family: inherit; border: none; cursor: pointer;
-}
-.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(124,58,237,.35); }
-.btn-outline {
-  border: 2px solid var(--purple); color: var(--purple);
-  padding: .8rem 2rem; border-radius: 30px; font-size: 15px; font-weight: 600;
-  text-decoration: none; display: inline-block;
-  transition: all .15s; font-family: inherit; background: transparent; cursor: pointer;
-}
-.btn-outline:hover { background: var(--purple); color: #fff; }
-.hero-img-wrap {
-  position: relative; display: flex; justify-content: center;
-}
-.hero-img-wrap::before {
-  content: ''; position: absolute;
-  width: 360px; height: 360px; border-radius: 50%;
-  background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%);
-  top: 50%; left: 50%; transform: translate(-50%, -50%);
-  z-index: 0; opacity: .12;
-}
-.hero-img-wrap::after {
-  content: ''; position: absolute;
-  width: 320px; height: 320px; border-radius: 50%;
-  border: 3px solid var(--purple-light);
-  top: 50%; left: 50%; transform: translate(-50%, -50%);
-  z-index: 0; opacity: .4;
-}
-.hero-img {
-  width: 340px; height: 400px; object-fit: cover; object-position: top;
-  border-radius: 50% 50% 48% 52% / 55% 55% 45% 45%;
-  position: relative; z-index: 1;
-  box-shadow: 0 20px 60px rgba(124,58,237,.25);
-  border: 4px solid #fff;
-}
-.hero-stats {
-  display: flex; gap: 2rem; margin-top: 2.5rem; flex-wrap: wrap;
-}
-.stat { text-align: center; }
-.stat-num { font-size: 24px; font-weight: 800; color: var(--purple); }
-.stat-lbl { font-size: 12px; color: var(--gray); margin-top: 2px; }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-/* â”€â”€ SECTIONS â”€â”€ */
-.section { padding: 5rem 2rem; }
-.section-alt { background: var(--gray-light); }
-.container { max-width: 1100px; margin: 0 auto; }
-.section-label {
-  display: inline-block; background: var(--purple-pale); color: var(--purple);
-  padding: .3rem .9rem; border-radius: 20px; font-size: 12px; font-weight: 600;
-  margin-bottom: .75rem; letter-spacing: .5px;
-}
-.section-title {
-  font-size: clamp(22px, 3vw, 36px); font-weight: 800;
-  color: var(--dark); margin-bottom: .75rem; line-height: 1.3;
-}
-.section-sub { font-size: 15px; color: var(--gray); line-height: 1.8; max-width: 600px; }
+  <style>
+    :root {
+      --primary: #7c3aed;
+      --secondary: #a855f7;
+      --accent: #f3e8ff;
+      --background: #ffffff;
+      --surface: #ffffff;
+      --text: #1f1235;
+      --muted: #685c75;
+      --border: rgba(124, 58, 237, 0.14);
+      --shadow: 0 18px 45px rgba(92, 41, 150, 0.12);
+      --shadow-hover: 0 24px 55px rgba(124, 58, 237, 0.22);
+      --radius: 24px;
+      --header-height: 84px;
+    }
 
-/* â”€â”€ ABOUT â”€â”€ */
-.about-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem;
-}
-.about-img-side { position: relative; }
-.about-img {
-  width: 100%; border-radius: 24px;
-  box-shadow: var(--shadow-lg);
-  object-fit: cover; object-position: top; max-height: 480px;
-}
-.about-badge {
-  position: absolute; bottom: -1rem; right: -1rem;
-  background: var(--purple); color: #fff;
-  padding: 1rem 1.5rem; border-radius: 16px;
-  box-shadow: var(--shadow);
-}
-.about-badge-num { font-size: 28px; font-weight: 800; }
-.about-badge-lbl { font-size: 12px; opacity: .85; }
-.about-text { font-size: 15px; color: var(--gray); line-height: 2; margin-bottom: 1.5rem; }
-.about-features { display: flex; flex-direction: column; gap: .75rem; }
-.feature-item {
-  display: flex; align-items: center; gap: .75rem;
-  font-size: 14px; color: var(--dark); font-weight: 500;
-}
-.feature-item::before {
-  content: 'âœ“'; width: 24px; height: 24px; border-radius: 50%;
-  background: var(--purple-pale); color: var(--purple);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 12px; font-weight: 700; flex-shrink: 0;
-}
+     {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-/* â”€â”€ SERVICES â”€â”€ */
-.services-grid {
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.25rem; margin-top: 3rem;
-}
-.service-card {
-  background: #fff; border: 1px solid #ede9fe;
-  border-radius: 20px; padding: 1.75rem 1.5rem;
-  transition: transform .2s, box-shadow .2s;
-  cursor: default; text-align: center;
-}
-.service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
-.service-ico { font-size: 2.5rem; margin-bottom: 1rem; }
-.service-title { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: .5rem; }
-.service-desc { font-size: 13px; color: var(--gray); line-height: 1.7; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 105px;
+    }
 
-/* â”€â”€ HOW IT WORKS â”€â”€ */
-.steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin-top: 3rem; }
-.step { text-align: center; padding: 2rem 1.5rem; }
-.step-num {
-  width: 56px; height: 56px; border-radius: 50%;
-  background: var(--purple); color: #fff;
-  font-size: 20px; font-weight: 800;
-  display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 1.25rem;
-}
-.step-title { font-size: 16px; font-weight: 700; margin-bottom: .5rem; }
-.step-desc { font-size: 13px; color: var(--gray); line-height: 1.7; }
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: var(--text);
+      background: var(--background);
+      font-family: "Vazirmatn", Tahoma, sans-serif;
+      line-height: 1.9;
+    }
 
-/* â”€â”€ BOOKING / CONTACT â”€â”€ */
-.booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
-.form-card {
-  background: #fff; border-radius: 24px;
-  padding: 2rem; box-shadow: var(--shadow);
-}
-.form-title { font-size: 18px; font-weight: 700; margin-bottom: 1.5rem; color: var(--dark); }
-.form-group { margin-bottom: 1rem; }
-.form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--dark); margin-bottom: .4rem; }
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%; padding: .75rem 1rem;
-  border: 1.5px solid #e5e7eb; border-radius: 12px;
-  font-size: 14px; font-family: inherit; color: var(--dark);
-  transition: border-color .15s; background: #fafafa; outline: none;
-}
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus { border-color: var(--purple); background: #fff; }
-.form-group textarea { height: 100px; resize: vertical; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
-.btn-submit {
-  width: 100%; padding: .875rem;
-  background: var(--purple); color: #fff;
-  border: none; border-radius: 12px;
-  font-size: 15px; font-weight: 700;
-  font-family: inherit; cursor: pointer;
-  transition: transform .15s, box-shadow .15s; margin-top: .5rem;
-}
-.btn-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(124,58,237,.35); }
-.contact-side {}
-.contact-title { font-size: 18px; font-weight: 700; margin-bottom: 1.5rem; color: var(--dark); }
-.contact-items { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
-.contact-item {
-  display: flex; align-items: center; gap: 1rem;
-  background: #fff; border: 1px solid #ede9fe;
-  border-radius: 14px; padding: 1rem 1.25rem;
-}
-.contact-ico { font-size: 1.5rem; flex-shrink: 0; }
-.contact-lbl { font-size: 11px; color: var(--gray); margin-bottom: 2px; }
-.contact-val { font-size: 14px; font-weight: 600; color: var(--dark); }
-.contact-val a { color: var(--purple); text-decoration: none; }
-.social-title { font-size: 14px; font-weight: 700; margin-bottom: 1rem; color: var(--dark); }
-.social-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
-.social-btn {
-  display: flex; align-items: center; gap: .625rem;
-  padding: .75rem 1rem; border-radius: 12px;
-  font-size: 13px; font-weight: 600; text-decoration: none;
-  transition: transform .15s, opacity .15s; font-family: inherit;
-  border: none; cursor: pointer;
-}
-.social-btn:hover { transform: translateY(-2px); opacity: .9; }
-.s-insta { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); color: #fff; }
-.s-whatsapp { background: #25d366; color: #fff; }
-.s-telegram { background: #0088cc; color: #fff; }
-.s-youtube { background: #ff0000; color: #fff; }
+    body.menu-open {
+      overflow: hidden;
+    }
 
-/* â”€â”€ FOOTER â”€â”€ */
-footer {
-  background: var(--dark); color: rgba(255,255,255,.7);
-  padding: 3rem 2rem 1.5rem; text-align: center;
-}
-.footer-logo { margin-bottom: 1rem; }
-.footer-logo img { height: 52px; opacity: .85; }
-.footer-tagline { font-size: 15px; color: rgba(255,255,255,.85); margin-bottom: 1.5rem; font-weight: 500; }
-.footer-nav { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-.footer-nav a { color: rgba(255,255,255,.6); text-decoration: none; font-size: 13px; transition: color .15s; }
-.footer-nav a:hover { color: var(--purple-light); }
-.footer-copy { font-size: 12px; border-top: 1px solid rgba(255,255,255,.1); padding-top: 1.25rem; margin-top: .5rem; }
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-/* â”€â”€ ANIMATIONS â”€â”€ */
-.fade-in { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-/* â”€â”€ RESPONSIVE â”€â”€ */
-@media (max-width: 900px) {
-  .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 2.5rem; }
-  .hero-img-wrap { order: -1; }
-  .hero-img { width: 260px; height: 300px; }
-  .hero-img-wrap::before { width: 280px; height: 280px; }
-  .hero-img-wrap::after { width: 250px; height: 250px; }
-  .hero-stats { justify-content: center; }
-  .hero-btns { justify-content: center; }
-  .hero-sub { margin: 0 auto 2rem; }
-  .about-grid { grid-template-columns: 1fr; }
-  .about-badge { right: 1rem; }
-  .steps { grid-template-columns: 1fr; }
-  .booking-grid { grid-template-columns: 1fr; }
-  .nav-links, .nav-cta { display: none; }
-  .hamburger { display: flex; }
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      border: 0;
+      cursor: pointer;
+    }
+
+    ::selection {
+      color: #ffffff;
+      background: var(--primary);
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .section {
+      position: relative;
+      padding: 105px 0;
+    }
+
+    .section-soft {
+      background:
+        radial-gradient(circle at 15% 25%, rgba(168, 85, 247, 0.10), transparent 30%),
+        linear-gradient(180deg, #fcfaff 0%, #ffffff 100%);
+    }
+
+    .section-heading {
+      max-width: 690px;
+      margin: 0 auto 55px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+      padding: 7px 16px;
+      color: var(--primary);
+      background: var(--accent);
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 800;
+    }
+
+    .eyebrow::before {
+      width: 7px;
+      height: 7px;
+      background: var(--secondary);
+      border-radius: 50%;
+      content: "";
+      box-shadow: 0 0 0 5px rgba(168, 85, 247, 0.12);
+    }
+
+    .section-heading h2 {
+      margin-bottom: 14px;
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      font-weight: 900;
+      line-height: 1.35;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .gradient-text {
+      color: var(--primary);
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .btn {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 25px;
+      border: 1px solid transparent;
+      border-radius: 14px;
+      font-weight: 800;
+      transition: transform 0.25s ease, box-shadow 0.25s ease,
+                  background 0.25s ease, color 0.25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      box-shadow: 0 12px 25px rgba(124, 58, 237, 0.25);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 17px 34px rgba(124, 58, 237, 0.36);
+    }
+
+    .btn-outline {
+      color: var(--primary);
+      background: rgba(255, 255, 255, 0.75);
+      border-color: rgba(124, 58, 237, 0.28);
+    }
+
+    .btn-outline:hover {
+      color: #ffffff;
+      background: var(--primary);
+    }
+
+    / Header /
+    .site-header {
+      position: sticky;
+      z-index: 1000;
+      top: 0;
+      height: var(--header-height);
+      background: rgba(255, 255, 255, 0.88);
+      border-bottom: 1px solid rgba(124, 58, 237, 0.10);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .site-header.scrolled {
+      box-shadow: 0 10px 35px rgba(31, 18, 53, 0.09);
+    }
+
+    .header-inner {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .brand {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      width: 54px;
+      height: 54px;
+      padding: 4px;
+      object-fit: contain;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 8px 22px rgba(124, 58, 237, 0.12);
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.45;
+    }
+
+    .brand-title {
+      color: var(--primary);
+      font-size: 1.18rem;
+      font-weight: 900;
+    }
+
+    .brand-subtitle {
+      color: var(--muted);
+      font-size: 0.72rem;
+      font-weight: 500;
+    }
+
+    .main-nav {
+      margin-inline-start: auto;
+    }
+
+    .nav-list {
+      display: flex;
+      align-items: center;
+      gap: 29px;
+      list-style: none;
+    }
+
+    .nav-link {
+      position: relative;
+      padding: 8px 0;
+      color: #453951;
+      font-size: 0.94rem;
+      font-weight: 700;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      border-radius: 99px;
+      content: "";
+      transition: width 0.25s ease;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--primary);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .header-cta {
+      min-height: 46px;
+      padding-inline: 20px;
+      border-radius: 12px;
+      font-size: 0.9rem;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      color: var(--text);
+      background: var(--accent);
+      border-radius: 13px;
+    }
+
+    .menu-toggle span {
+      width: 22px;
+      height: 2px;
+      background: currentColor;
+      border-radius: 5px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    / Hero /
+    .hero {
+      position: relative;
+      display: flex;
+      min-height: calc(100vh - var(--header-height));
+      align-items: center;
+      overflow: hidden;
+      padding: 75px 0 95px;
+      background:
+        radial-gradient(circle at 10% 25%, rgba(168, 85, 247, 0.18), transparent 32%),
+        radial-gradient(circle at 85% 80%, rgba(124, 58, 237, 0.09), transparent 28%),
+        linear-gradient(130deg, #ffffff 20%, #fbf7ff 65%, #f3e8ff 100%);
+    }
+
+    .hero::before,
+    .hero::after {
+      position: absolute;
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .hero::before {
+      top: 12%;
+      right: -80px;
+      width: 230px;
+      height: 230px;
+      border: 40px solid rgba(124, 58, 237, 0.05);
+    }
+
+    .hero::after {
+      bottom: -90px;
+      left: 38%;
+      width: 180px;
+      height: 180px;
+      background: rgba(168, 85, 247, 0.06);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .hero-content {
+      grid-column: 1;
+    }
+
+    .hero-image-wrap {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 20px;
+      padding: 8px 15px;
+      color: var(--primary);
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid rgba(124, 58, 237, 0.16);
+      border-radius: 999px;
+      box-shadow: 0 7px 20px rgba(124, 58, 237, 0.08);
+      font-size: 0.88rem;
+      font-weight: 800;
+    }
+
+    .hero-badge span {
+      font-size: 1.1rem;
+    }
+
+    .hero h1 {
+      max-width: 710px;
+      margin-bottom: 22px;
+      font-size: clamp(2.35rem, 5.2vw, 4.35rem);
+      font-weight: 900;
+      letter-spacing: -1.5px;
+      line-height: 1.33;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      margin-bottom: 31px;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.16rem);
+      line-height: 2;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 32px;
+      color: #5e506d;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .hero-trust span {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .hero-trust span::before {
+      display: grid;
+      width: 23px;
+      height: 23px;
+      place-items: center;
+      color: #ffffff;
+      background: var(--primary);
+      border-radius: 50%;
+      content: "?";
+      font-size: 0.75rem;
+    }
+
+    .hero-image-wrap {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .hero-image-frame {
+      position: relative;
+      width: min(100%, 430px);
+      aspect-ratio: 0.88;
+      padding: 11px;
+      background: linear-gradient(145deg, var(--primary), var(--secondary));
+      border-radius: 48% 48% 42% 42% / 42% 42% 48% 48%;
+      box-shadow: 0 28px 65px rgba(124, 58, 237, 0.27);
+      animation: floatImage 5s ease-in-out infinite;
+    }
+
+    .hero-image-frame::before {
+      position: absolute;
+      z-index: -1;
+      inset: -22px;
+      border: 2px dashed rgba(124, 58, 237, 0.24);
+      border-radius: inherit;
+      content: "";
+      animation: rotateBorder 28s linear infinite;
+    }
+
+    .hero-image-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      background: var(--accent);
+      border: 6px solid #ffffff;
+      border-radius: inherit;
+    }
+
+    .floating-card {
+      position: absolute;
+      right: -18px;
+      bottom: 42px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 17px;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.93);
+      border: 1px solid rgba(124, 58, 237, 0.12);
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      font-size: 0.88rem;
+      font-weight: 800;
+      backdrop-filter: blur(12px);
+    }
+
+    .floating-icon {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      background: var(--accent);
+      border-radius: 12px;
+      font-size: 1.1rem;
+    }
+
+    @keyframes floatImage {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes rotateBorder {
+      to { transform: rotate(360deg); }
+    }
+
+    / About /
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      align-items: center;
+      gap: 55px;
+    }
+
+    .about-decoration {
+      position: relative;
+      display: grid;
+      min-height: 410px;
+      place-items: center;
+    }
+
+    .about-circle {
+      display: grid;
+      width: 320px;
+      max-width: 100%;
+      aspect-ratio: 1;
+      place-items: center;
+      color: #ffffff;
+      background: linear-gradient(145deg, var(--primary), var(--secondary));
+      border-radius: 50%;
+      box-shadow: 0 25px 60px rgba(124, 58, 237, 0.26);
+    }
+
+    .about-circle-inner {
+      width: calc(100% - 36px);
+      height: calc(100% - 36px);
+      display: grid;
+      place-items: center;
+      padding: 30px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.11);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 50%;
+    }
+
+    .about-circle-icon {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 3.6rem;
+      line-height: 1;
+    }
+
+    .about-circle strong {
+      font-size: 1.2rem;
+    }
+
+    .about-dot {
+      position: absolute;
+      width: 85px;
+      height: 85px;
+      border: 16px solid var(--accent);
+      border-radius: 50%;
+    }
+
+    .about-dot:first-child {
+      top: 15px;
+      right: 5%;
+    }
+
+    .about-dot:last-child {
+      bottom: 20px;
+      left: 4%;
+      width: 55px;
+      height: 55px;
+      border-width: 11px;
+    }
+
+    .about-content h2 {
+      margin: 11px 0 22px;
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      font-weight: 900;
+    }
+
+    .about-quote {
+      position: relative;
+      padding: 26px 29px;
+      color: #51445f;
+      background: #fcfaff;
+      border: 1px solid var(--border);
+      border-right: 5px solid var(--primary);
+      border-radius: 20px;
+      font-size: 1.02rem;
+      line-height: 2.15;
+      box-shadow: 0 14px 35px rgba(70, 35, 110, 0.07);
+    }
+
+    .about-quote::before {
+      position: absolute;
+      top: -24px;
+      left: 22px;
+      color: rgba(124, 58, 237, 0.12);
+      content: "”";
+      font-size: 6rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 13px;
+      margin-top: 25px;
+    }
+
+    .stat-card {
+      padding: 19px 12px;
+      text-align: center;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      box-shadow: 0 10px 25px rgba(77, 39, 119, 0.06);
+    }
+
+    .stat-icon {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 1.45rem;
+    }
+
+    .stat-value {
+      display: block;
+      color: var(--primary);
+      font-size: 1.05rem;
+      font-weight: 900;
+    }
+
+    / Services /
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      position: relative;
+      grid-column: span 2;
+      min-height: 270px;
+      overflow: hidden;
+      padding: 31px 27px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 12px 35px rgba(61, 27, 98, 0.07);
+      transition: transform 0.32s ease, box-shadow 0.32s ease,
+                  border-color 0.32s ease;
+    }
+
+    .service-card:nth-child(4) {
+      grid-column: 2 / span 2;
+    }
+
+    .service-card:nth-child(5) {
+      grid-column: 4 / span 2;
+    }
+
+    .service-card::before {
+      position: absolute;
+      top: -50px;
+      left: -45px;
+      width: 125px;
+      height: 125px;
+      background: var(--accent);
+      border-radius: 50%;
+      content: "";
+      transition: transform 0.35s ease;
+    }
+
+    .service-card:hover {
+      z-index: 2;
+      transform: translateY(-10px);
+      border-color: rgba(124, 58, 237, 0.34);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .service-card:hover::before {
+      transform: scale(1.25);
+    }
+
+    .service-icon {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      width: 62px;
+      height: 62px;
+      margin-bottom: 21px;
+      place-items: center;
+      background: linear-gradient(145deg, #ffffff, var(--accent));
+      border: 1px solid rgba(124, 58, 237, 0.14);
+      border-radius: 18px;
+      box-shadow: 0 9px 20px rgba(124, 58, 237, 0.12);
+      font-size: 1.75rem;
+    }
+
+    .service-card h3 {
+      margin-bottom: 11px;
+      font-size: 1.16rem;
+      font-weight: 900;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.9;
+    }
+
+    / How it works /
+    .steps {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+
+    .steps::before {
+      position: absolute;
+      z-index: 0;
+      top: 55px;
+      right: 16%;
+      left: 16%;
+      height: 2px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--secondary) 0 9px,
+        transparent 9px 18px
+      );
+      content: "";
+      opacity: 0.45;
+    }
+
+    .step {
+      position: relative;
+      z-index: 1;
+      padding: 29px 24px;
+      text-align: center;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 14px 36px rgba(68, 32, 107, 0.08);
+    }
+
+    .step-number {
+      position: absolute;
+      top: 17px;
+      right: 18px;
+      display: grid;
+      width: 32px;
+      height: 32px;
+      place-items: center;
+      color: #ffffff;
+      background: var(--primary);
+      border-radius: 10px;
+      font-weight: 900;
+    }
+
+    .step-icon {
+      display: grid;
+      width: 82px;
+      height: 82px;
+      margin: 0 auto 21px;
+      place-items: center;
+      color: var(--primary);
+      background: var(--accent);
+      border-radius: 50%;
+      font-size: 2rem;
+      box-shadow: inset 0 0 0 8px rgba(255, 255, 255, 0.72);
+    }
+
+    .step h3 {
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+      font-weight: 900;
+    }
+
+    .step p {
+      color: var(--muted);
+      font-size: 0.91rem;
+    }
+
+    / Contact /
+    .contact-shell {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-form-wrap {
+      padding: 43px;
+    }
+
+    .contact-form-wrap h3,
+    .direct-contact h3 {
+      margin-bottom: 8px;
+      font-size: 1.55rem;
+      font-weight: 900;
+    }
+
+    .form-intro {
+      margin-bottom: 26px;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      font-size: 0.89rem;
+      font-weight: 800;
+    }
+
+    .required {
+      color: #e11d48;
+    }
+
+    .form-control {
+      width: 100%;
+      min-height: 52px;
+      padding: 11px 15px;
+      color: var(--text);
+      background: #fdfbff;
+      border: 1px solid rgba(124, 58, 237, 0.18);
+      border-radius: 13px;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease,
+                  background 0.2s ease;
+    }
+
+    .form-control:focus {
+      background: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.10);
+    }
+
+    textarea.form-control {
+      min-height: 125px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      width: 100%;
+      margin-top: 3px;
+    }
+
+    .form-status {
+      display: none;
+      margin-top: 15px;
+      padding: 11px 14px;
+      color: #166534;
+      background: #dcfce7;
+      border-radius: 11px;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .direct-contact {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      padding: 45px;
+      color: #ffffff;
+      background: linear-gradient(145deg, var(--primary), var(--secondary));
+    }
+
+    .direct-contact::before,
+    .direct-contact::after {
+      position: absolute;
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .direct-contact::before {
+      top: -90px;
+      left: -90px;
+      width: 240px;
+      height: 240px;
+    }
+
+    .direct-contact::after {
+      right: -65px;
+      bottom: -65px;
+      width: 180px;
+      height: 180px;
+    }
+
+    .direct-contact >  {
+      position: relative;
+      z-index: 1;
+    }
+
+    .direct-contact > p {
+      margin-bottom: 27px;
+      color: rgba(255, 255, 255, 0.86);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 15px;
+      padding: 17px;
+      background: rgba(255, 255, 255, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.20);
+      border-radius: 16px;
+      transition: background 0.25s ease, transform 0.25s ease;
+    }
+
+    .contact-item:hover {
+      background: rgba(255, 255, 255, 0.22);
+      transform: translateX(-4px);
+    }
+
+    .contact-item-icon {
+      display: grid;
+      width: 46px;
+      height: 46px;
+      flex-shrink: 0;
+      place-items: center;
+      background: rgba(255, 255, 255, 0.17);
+      border-radius: 13px;
+      font-size: 1.25rem;
+    }
+
+    .contact-item small {
+      display: block;
+      color: rgba(255, 255, 255, 0.73);
+    }
+
+    .contact-item strong {
+      direction: ltr;
+      display: inline-block;
+      font-size: 0.96rem;
+    }
+
+    .privacy-note {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      margin-top: 17px;
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.84rem;
+    }
+
+    /* Social /
+    .social-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .social-btn {
+      display: flex;
+      min-height: 92px;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 20px;
+      color: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 13px 30px rgba(31, 18, 53, 0.13);
+      font-size: 1.05rem;
+      font-weight: 900;
+      transition: transform 0.3s ease, box-shadow 0.3s ease,
+                  filter 0.3s ease;
+    }
+
+    .social-btn:hover {
+      transform: translateY(-7px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(31, 18, 53, 0.20);
+      filter: brightness(1.05);
+    }
+
+    .social-icon {
+      font-size: 1.6rem;
+    }
+
+    .instagram {
+      background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+    }
+
+    .whatsapp {
+      background: linear-gradient(135deg, #128c7e, #25d366);
+    }
+
+    .telegram {
+      background: linear-gradient(135deg, #1478b8, #2aabee);
+    }
+
+    .youtube {
+      background: linear-gradient(135deg, #c00000, #ff0000);
+    }
+
+    / Footer /
+    .site-footer {
+      position: relative;
+      overflow: hidden;
+      padding: 58px 0 25px;
+      color: rgba(255, 255, 255, 0.82);
+      background: #1f1235;
+    }
+
+    .site-footer::before {
+      position: absolute;
+      top: -150px;
+      right: 15%;
+      width: 380px;
+      height: 260px;
+      background: rgba(124, 58, 237, 0.22);
+      border-radius: 50%;
+      content: "";
+      filter: blur(80px);
+    }
+
+    .footer-top {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      padding-bottom: 35px;
+    }
+
+    .footer-brand h3 {
+      margin-bottom: 7px;
+      color: #ffffff;
+      font-size: 1.35rem;
+    }
+
+    .footer-brand p {
+      color: #d8c9e8;
+      font-size: 0.95rem;
+    }
+
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 23px;
+    }
+
+    .footer-nav a {
+      transition: color 0.2s ease;
+    }
+
+    .footer-nav a:hover {
+      color: #c084fc;
+    }
+
+    .footer-bottom {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 23px;
+      border-top: 1px solid rgba(255, 255, 255, 0.10);
+      font-size: 0.84rem;
+    }
+
+    .footer-quote {
+      color: #d8b4fe;
+      font-weight: 800;
+    }
+
+    .back-to-top {
+      position: fixed;
+      z-index: 900;
+      left: 22px;
+      bottom: 22px;
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      color: #ffffff;
+      background: var(--primary);
+      border-radius: 14px;
+      box-shadow: 0 12px 28px rgba(124, 58, 237, 0.32);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(15px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    / Scroll animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 { transition-delay: 0.08s; }
+    .delay-2 { transition-delay: 0.16s; }
+    .delay-3 { transition-delay: 0.24s; }
+    .delay-4 { transition-delay: 0.32s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 1050px) {
+      .nav-list {
+        gap: 18px;
+      }
+
+      .hero-grid {
+        gap: 40px;
+      }
+
+      .hero-image-frame {
+        width: min(100%, 360px);
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .service-card,
+      .service-card:nth-child(4),
+      .service-card:nth-child(5) {
+        grid-column: auto;
+      }
+
+      .service-card:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 860px) {
+      :root {
+        --header-height: 74px;
+      }
+
+      .container {
+        width: min(100% - 30px, 720px);
+      }
+
+      .section {
+        padding: 80px 0;
+      }
+
+      .brand-logo {
+        width: 48px;
+        height: 48px;
+      }
+
+      .brand-title {
+        font-size: 1.02rem;
+      }
+
+      .brand-subtitle {
+        font-size: 0.67rem;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .header-cta {
+        display: none;
+      }
+
+      .main-nav {
+        position: fixed;
+        z-index: 999;
+        top: var(--header-height);
+        right: 15px;
+        left: 15px;
+        visibility: hidden;
+        overflow: hidden;
+        margin: 0;
+        padding: 18px;
+        background: rgba(255, 255, 255, 0.98);
+        border: 1px solid var(--border);
+        border-radius: 0 0 20px 20px;
+        box-shadow: var(--shadow);
+        opacity: 0;
+        transform: translateY(-12px);
+        transition: opacity 0.25s ease, transform 0.25s ease,
+                    visibility 0.25s ease;
+      }
+
+      .main-nav.open {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .nav-list {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+      }
+
+      .nav-link {
+        display: block;
+        padding: 11px 14px;
+        border-radius: 10px;
+      }
+
+      .nav-link:hover {
+        background: var(--accent);
+      }
+
+      .nav-link::after {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 65px 0 80px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-content {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .hero-image-wrap {
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 15px;
+      }
+
+      .hero-description {
+        margin-inline: auto;
+      }
+
+      .hero-actions,
+      .hero-trust {
+        justify-content: center;
+      }
+
+      .hero-image-frame {
+        width: min(80%, 390px);
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-decoration {
+        min-height: 345px;
+      }
+
+      .about-circle {
+        width: 290px;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .steps::before {
+        display: none;
+      }
+
+      .contact-shell {
+        grid-template-columns: 1fr;
+      }
+
+      .direct-contact {
+        order: -1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 24px, 520px);
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+
+      .site-header {
+        height: 70px;
+      }
+
+      .brand {
+        gap: 8px;
+      }
+
+      .brand-logo {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+      }
+
+      .brand-title {
+        font-size: 0.94rem;
+      }
+
+      .brand-subtitle {
+        display: none;
+      }
+
+      .main-nav {
+        top: 70px;
+        right: 12px;
+        left: 12px;
+      }
+
+      .hero {
+        padding-top: 50px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2rem, 10vw, 2.85rem);
+        letter-spacing: -0.7px;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .hero-actions .btn {
+        width: 100%;
+      }
+
+      .hero-trust {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .hero-image-frame {
+        width: min(92%, 340px);
+      }
+
+      .floating-card {
+        right: -4px;
+        bottom: 25px;
+        padding: 10px 12px;
+        font-size: 0.78rem;
+      }
+
+      .about-decoration {
+        min-height: 300px;
+      }
+
+      .about-circle {
+        width: 250px;
+      }
+
+      .about-circle-inner {
+        width: calc(100% - 27px);
+        height: calc(100% - 27px);
+      }
+
+      .about-quote {
+        padding: 23px 20px;
+        font-size: 0.94rem;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card,
+      .service-card:last-child {
+        grid-column: auto;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-form-wrap,
+      .direct-contact {
+        padding: 29px 20px;
+      }
+
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-top,
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-nav {
+        justify-content: center;
+      }
+
+      .back-to-top {
+        left: 14px;
+        bottom: 14px;
+        width: 44px;
+        height: 44px;
+      }
+    }
+.reveal,
+
+.reveal.visible {
+
+  opacity: 1 !important;
+
+  visibility: visible !important;
+
+  transform: none !important;
+
 }
-@media (max-width: 520px) {
-  nav { padding: 0 1rem; }
-  .section { padding: 3.5rem 1.25rem; }
-  .hero { padding: 90px 1.25rem 3rem; }
-  .services-grid { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-  .social-grid { grid-template-columns: 1fr; }
-}
-</style>
+  </style>
 </head>
+
 <body>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="صفحه اصلي منصوره ايزدي">
+        <img src="logo2.png" alt="لوگوي منصوره ايزدي" class="brand-logo">
+        <span class="brand-text">
+          <span class="brand-title">منصوره ايزدي</span>
+          <span class="brand-subtitle">سکس تراپيست و روان‌درمانگر</span>
+        </span>
+      </a>
 
-<!-- NAVBAR -->
-<nav>
-  <div class="nav-logo">
-    <img src="logo2.png" alt="M.Izadi Sex Therapist Logo">
-  </div>
-  <ul class="nav-links">
-    <li><a href="#about">ط¯ط±ط¨ط§ط±ظ‡ ظ…ظ†</a></li>
-    <li><a href="#services">ط®ط¯ظ…ط§طھ</a></li>
-    <li><a href="#how">ط´غŒظˆظ‡ ع©ط§ط±</a></li>
-    <li><a href="#booking">ط±ط²ط±ظˆ ظ†ظˆط¨طھ</a></li>
-    <li><a href="#contact">طھظ…ط§ط³</a></li>
-  </ul>
-  <a href="#booking" class="nav-cta">ط±ط²ط±ظˆ ظ†ظˆط¨طھ</a>
-  <button class="hamburger" onclick="toggleMenu()" aria-label="ظ…ظ†ظˆ">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+      <nav class="main-nav" id="mainNav" aria-label="منوي اصلي">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#about">درباره من</a></li>
+          <li><a class="nav-link" href="#services">خدمات</a></li>
+          <li><a class="nav-link" href="#appointment">رزرو نوبت</a></li>
+          <li><a class="nav-link" href="#contact">تماس</a></li>
+        </ul>
+      </nav>
 
-<!-- MOBILE MENU -->
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#about" onclick="toggleMenu()">ط¯ط±ط¨ط§ط±ظ‡ ظ…ظ†</a>
-  <a href="#services" onclick="toggleMenu()">ط®ط¯ظ…ط§طھ</a>
-  <a href="#how" onclick="toggleMenu()">ط´غŒظˆظ‡ ع©ط§ط±</a>
-  <a href="#booking" onclick="toggleMenu()">ط±ط²ط±ظˆ ظ†ظˆط¨طھ</a>
-  <a href="#contact" onclick="toggleMenu()">طھظ…ط§ط³</a>
+      <a href="#appointment" class="btn btn-primary header-cta">رزرو نوبت</a>
+
+      <button
+        type="button"
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="باز کردن منو"
+        aria-expanded="false"
+        aria-controls="mainNav"
+<span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <div class="hero-badge">
+            <span>?</span>
+            مشاوره تخصصي، امن و بدون قضاوت
+          </div>
+
+          <h1>
+            سلامت جنسي،
+            <span class="gradient-text">حق طبيعي شماست</span>
+          </h1>
+
+          <p class="hero-description">
+            براي ساختن رابطه‌اي سالم‌تر، شناخت بهتر خود و تجربه آرامش بيشتر،
+            در فضايي کاملاً محرمانه و همدلانه همراه شما هستم.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#appointment" class="btn btn-primary">
+              <span>??</span>
+              رزرو نوبت
+            </a>
+            <a href="#about" class="btn btn-outline">
+              بيشتر بدانيد
+              <span>?</span>
+            </a>
+          </div>
+
+          <div class="hero-trust">
+            <span>کاملاً محرمانه</span>
+            <span>رويکرد علمي</span>
+            <span>حضوري و آنلاين</span>
+          </div>
+        </div>
+
+        <div class="hero-image-wrap reveal delay-2">
+          <div class="hero-image-frame">
+            <img src="photo.jpg" alt="تصوير منصوره ايزدي، سکس تراپيست و روان‌درمانگر">
+          </div>
+
+          <div class="floating-card">
+            <span class="floating-icon">??</span>
+            <span>فضايي امن براي گفت‌وگو</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-decoration reveal">
+          <span class="about-dot"></span>
+          <div class="about-circle">
+            <div class="about-circle-inner">
+              <div>
+                <span class="about-circle-icon">??</span>
+                <strong>در مسير آرامش و آگاهي، کنار شما هستم</strong>
+              </div>
+            </div>
+          </div>
+          <span class="about-dot"></span>
+        </div>
+
+        <div class="about-content reveal delay-1">
+          <span class="eyebrow">درباره من</span>
+          <h2>همراهي علمي و همدلانه براي <span class="gradient-text">تغييري ماندگار</span></h2>
+
+          <blockquote class="about-quote">
+            منصوره ايزدي، سکس تراپيست و روان‌درمانگر با سال‌ها تجربه در حوزه سلامت جنسي و روان‌شناسي باليني، با رويکردي علمي، همدلانه و کاملاً محرمانه در کنار شماست. او با تخصص در سکس تراپي فردي و زوجين، روان‌درماني، و مشاوره پيش از ازدواج، به افراد و زوج‌هايي کمک مي‌کند که مي‌خواهند کيفيت زندگي جنسي و عاطفي خود را بهبود بخشند. فضاي مشاوره، امن، بدون قضاوت و کاملاً خصوصي است.
+          </blockquote>
+
+          <div class="stats">
+            <div class="stat-card">
+              <span class="stat-icon">??</span>
+              <span class="stat-value">+??? مراجع</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-icon">??</span>
+              <span class="stat-value">+?? سال تجربه</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-icon">??</span>
+              <span class="stat-value">???? محرمانه</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">خدمات تخصصي</span>
+          <h2>براي هر نياز، يک مسير <span class="gradient-text">اختصاصي</span></h2>
+          <p>
+            خدمات مشاوره با توجه به شرايط، نيازها و اهداف شما به‌صورت
+            شخصي‌سازي‌شده ارائه مي‌شود.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon" aria-hidden="true">??</div>
+            <h3>سکس تراپي فردي</h3>
+            <p>بررسي و درمان مشکلات جنسي با رويکرد علمي و شخصي‌سازي‌شده</p>
+          </article>
+
+          <article class="service-card reveal delay-1">
+            <div class="service-icon" aria-hidden="true">??</div>
+            <h3>سکس تراپي زوجين</h3>
+            <p>بهبود رابطه جنسي و عاطفي زوج‌ها در فضايي امن</p>
+          </article>
+
+          <article class="service-card reveal delay-2">
+            <div class="service-icon" aria-hidden="true">??</div>
+            <h3>روان‌درماني فردي</h3>
+            <p>درمان اضطراب، افسردگي و مشکلات روان‌شناختي</p>
+          </article>
+
+          <article class="service-card reveal delay-1">
+            <div class="service-icon" aria-hidden="true">??</div>
+            <h3>مشاوره پيش از ازدواج</h3>
+            <p>آمادگي براي يک زندگي مشترک سالم و آگاهانه</p>
+          </article>
+
+          <article class="service-card reveal delay-2">
+            <div class="service-icon" aria-hidden="true">??</div>
+            <h3>مشاوره آنلاين</h3>
+            <p>جلسات ويديويي امن از هر کجا که هستيد</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">شيوه کار</span>
+          <h2>شروع مسير درمان در <span class="gradient-text">سه گام ساده</span></h2>
+          <p>با آرامش و اطمينان، اولين قدم را براي ايجاد تغيير برداريد.</p>
+        </div>
+
+        <div class="steps">
+          <article class="step reveal">
+            <span class="step-number">?</span>
+            <div class="step-icon" aria-hidden="true">??</div>
+            <h3>رزرو نوبت</h3>
+            <p>رزرو نوبت آنلاين يا تماس مستقيم</p>
+          </article>
+
+          <article class="step reveal delay-1">
+            <span class="step-number">?</span>
+            <div class="step-icon" aria-hidden="true">??</div>
+            <h3>جلسه اول آشنايي</h3>
+            <p>جلسه اول آشنايي به‌صورت حضوري يا آنلاين</p>
+          </article>
+
+          <article class="step reveal delay-2">
+            <span class="step-number">?</span>
+            <div class="step-icon" aria-hidden="true">??</div>
+            <h3>شروع مسير درمان</h3>
+            <p>تدوين مسير اختصاصي و شروع فرايند درمان</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="appointment">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">رزرو نوبت و تماس</span>
+          <h2>براي شروع، همين امروز <span class="gradient-text">اقدام کنيد</span></h2>
+          <p>
+            فرم را تکميل کنيد تا درخواست شما از طريق واتساپ ارسال شود.
+          </p>
+        </div>
+
+        <div class="contact-shell reveal">
+          <div class="contact-form-wrap">
+            <h3>فرم درخواست نوبت</h3>
+            <p class="form-intro">اطلاعات شما نزد ما کاملاً محرمانه باقي مي‌ماند.</p>
+
+            <form id="appointmentForm" novalidate>
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="fullName">
+                    نام کامل <span class="required">*</span>
+                  </label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="نام و نام خانوادگي"
+                    autocomplete="name"
+                    required
 </div>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-inner container">
-    <div class="hero-text">
-      <div class="hero-badge">ط³ع©ط³ طھط±ط§ظ¾غŒط³طھ ظˆ ط±ظˆط§ظ†â€Œط¯ط±ظ…ط§ظ†ع¯ط±</div>
-      <h1 class="hero-title">
-        ط³ظ„ط§ظ…طھ ط¬ظ†ط³غŒطŒ<br>
-        <span>ط­ظ‚ ط·ط¨غŒط¹غŒ طھظˆط³طھ</span>
-      </h1>
-      <p class="hero-sub">
-        ط¯ط± ظپط¶ط§غŒغŒ ط§ظ…ظ†طŒ ظ…ط­ط±ظ…ط§ظ†ظ‡ ظˆ ط¨ط¯ظˆظ† ظ‚ط¶ط§ظˆطھطŒ<br>
-        ظ…ط³غŒط± طھط؛غŒغŒط± ط±ط§ ط¨ط§ ظ…ظ†طµظˆط±ظ‡ ط§غŒط²ط¯غŒ ط¢ط؛ط§ط² ع©ظ†.
-      </p>
-      <div class="hero-btns">
-        <a href="#booking" class="btn-primary">ًں“… ط±ط²ط±ظˆ ظ†ظˆط¨طھ</a>
-        <a href="#about" class="btn-outline">ط¨غŒط´طھط± ط¨ط¯ط§ظ†غŒط¯</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><div class="stat-num">+غµغ°غ°</div><div class="stat-lbl">ظ…ط±ط§ط¬ط¹ ظ…ظˆظپظ‚</div></div>
-        <div class="stat"><div class="stat-num">+غ±غ°</div><div class="stat-lbl">ط³ط§ظ„ طھط¬ط±ط¨ظ‡</div></div>
-        <div class="stat"><div class="stat-num">غ±غ°غ°ظھ</div><div class="stat-lbl">ظ…ط­ط±ظ…ط§ظ†ظ‡</div></div>
-      </div>
-    </div>
-    <div class="hero-img-wrap">
-      <img src="photo.jpg" alt="ظ…ظ†طµظˆط±ظ‡ ط§غŒط²ط¯غŒ" class="hero-img">
-    </div>
-  </div>
-</section>
+                <div class="form-group">
+                  <label for="phone">
+                    شماره تماس <span class="required">*</span>
+                  </label>
+                  <input
+                    class="form-control"
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="مثلاً 09123456789"
+                    inputmode="tel"
+                    autocomplete="tel"
+                    pattern="[0-9?-?+\-\s]{10,15}"
+                    required
+</div>
 
-<!-- ABOUT -->
-<section class="section section-alt" id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-img-side fade-in">
-        <img src="photo.jpg" alt="ظ…ظ†طµظˆط±ظ‡ ط§غŒط²ط¯غŒ" class="about-img">
-        <div class="about-badge">
-          <div class="about-badge-num">+غ±غ°</div>
-          <div class="about-badge-lbl">ط³ط§ظ„ طھط¬ط±ط¨ظ‡</div>
-        </div>
-      </div>
-      <div class="fade-in">
-        <span class="section-label">ط¯ط±ط¨ط§ط±ظ‡ ظ…ظ†</span>
-        <h2 class="section-title">ظ…ظ†طµظˆط±ظ‡ ط§غŒط²ط¯غŒ</h2>
-        <p class="section-sub" style="margin-bottom:1.5rem">ط³ع©ط³ طھط±ط§ظ¾غŒط³طھ ظˆ ط±ظˆط§ظ†â€Œط¯ط±ظ…ط§ظ†ع¯ط±</p>
-        <p class="about-text">
-          ظ…ظ†طµظˆط±ظ‡ ط§غŒط²ط¯غŒطŒ ط³ع©ط³ طھط±ط§ظ¾غŒط³طھ ظˆ ط±ظˆط§ظ†â€Œط¯ط±ظ…ط§ظ†ع¯ط± ط¨ط§ ط³ط§ظ„â€Œظ‡ط§ طھط¬ط±ط¨ظ‡ ط¯ط± ط­ظˆط²ظ‡ ط³ظ„ط§ظ…طھ ط¬ظ†ط³غŒ ظˆ ط±ظˆط§ظ†â€Œط´ظ†ط§ط³غŒ ط¨ط§ظ„غŒظ†غŒطŒ ط¨ط§ ط±ظˆغŒع©ط±ط¯غŒ ط¹ظ„ظ…غŒطŒ ظ‡ظ…ط¯ظ„ط§ظ†ظ‡ ظˆ ع©ط§ظ…ظ„ط§ظ‹ ظ…ط­ط±ظ…ط§ظ†ظ‡ ط¯ط± ع©ظ†ط§ط± ط´ظ…ط§ط³طھ.
-        </p>
-        <p class="about-text">
-          ط§ظˆ ط¨ط§ طھط®طµطµ ط¯ط± ط³ع©ط³ طھط±ط§ظ¾غŒ ظپط±ط¯غŒ ظˆ ط²ظˆط¬غŒظ†طŒ ط±ظˆط§ظ†â€Œط¯ط±ظ…ط§ظ†غŒطŒ ظˆ ظ…ط´ط§ظˆط±ظ‡ ظ¾غŒط´ ط§ط² ط§ط²ط¯ظˆط§ط¬طŒ ط¨ظ‡ ط§ظپط±ط§ط¯ ظˆ ط²ظˆط¬â€Œظ‡ط§غŒغŒ ع©ظ…ع© ظ…غŒâ€Œع©ظ†ط¯ ع©ظ‡ ظ…غŒâ€Œط®ظˆط§ظ‡ظ†ط¯ ع©غŒظپغŒطھ ط²ظ†ط¯ع¯غŒ ط¬ظ†ط³غŒ ظˆ ط¹ط§ط·ظپغŒ ط®ظˆط¯ ط±ط§ ط¨ظ‡ط¨ظˆط¯ ط¨ط®ط´ظ†ط¯. ظپط¶ط§غŒ ظ…ط´ط§ظˆط±ظ‡طŒ ط§ظ…ظ†طŒ ط¨ط¯ظˆظ† ظ‚ط¶ط§ظˆطھ ظˆ ع©ط§ظ…ظ„ط§ظ‹ ط®طµظˆطµغŒ ط§ط³طھ.
-        </p>
-        <div class="about-features">
-          <div class="feature-item">ط±ظˆغŒع©ط±ط¯ ط¹ظ„ظ…غŒ ظˆ ظ…ط¨طھظ†غŒ ط¨ط± ط´ظˆط§ظ‡ط¯</div>
-          <div class="feature-item">ظپط¶ط§غŒ ع©ط§ظ…ظ„ط§ظ‹ ط§ظ…ظ† ظˆ ط¨ط¯ظˆظ† ظ‚ط¶ط§ظˆطھ</div>
-          <div class="feature-item">ظ…ط´ط§ظˆط±ظ‡ ط¢ظ†ظ„ط§غŒظ† ظˆ ط­ط¶ظˆط±غŒ</div>
-          <div class="feature-item">ظ…ط­ط±ظ…ط§ظ†ع¯غŒ ع©ط§ظ…ظ„ ط¬ظ„ط³ط§طھ</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+                <div class="form-group">
+                  <label for="service">
+                    نوع خدمت <span class="required">*</span>
+                  </label>
+                  <select class="form-control" id="service" name="service" required>
+                    <option value="" selected disabled>انتخاب کنيد</option>
+                    <option value="سکس تراپي فردي">سکس تراپي فردي</option>
+                    <option value="سکس تراپي زوجين">سکس تراپي زوجين</option>
+                    <option value="روان‌درماني">روان‌درماني</option>
+                    <option value="مشاوره پيش از ازدواج">پيش از ازدواج</option>
+                  </select>
+                </div>
 
-<!-- SERVICES -->
-<section class="section" id="services">
-  <div class="container">
-    <div class="fade-in" style="text-align:center;margin-bottom:.5rem">
-      <span class="section-label">ط®ط¯ظ…ط§طھ</span>
-      <h2 class="section-title">ع†ظ‡ ع©ظ…ع©غŒ ظ…غŒâ€Œطھظˆط§ظ†ظ… ط¨ع©ظ†ظ…طں</h2>
-      <p class="section-sub" style="margin:0 auto">ط®ط¯ظ…ط§طھ طھط®طµطµغŒ ط¯ط± ط­ظˆط²ظ‡ ط³ظ„ط§ظ…طھ ط¬ظ†ط³غŒ ظˆ ط±ظˆط§ظ†â€Œط¯ط±ظ…ط§ظ†غŒ</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card fade-in">
-        <div class="service-ico">ًں’œ</div>
-        <div class="service-title">ط³ع©ط³ طھط±ط§ظ¾غŒ ظپط±ط¯غŒ</div>
-        <div class="service-desc">ط¨ط±ط±ط³غŒ ظˆ ط¯ط±ظ…ط§ظ† ظ…ط´ع©ظ„ط§طھ ط¬ظ†ط³غŒ ط¨ط§ ط±ظˆغŒع©ط±ط¯ ط¹ظ„ظ…غŒ ظˆ ط´ط®طµغŒâ€Œط³ط§ط²غŒâ€Œط´ط¯ظ‡ ط¨ط±ط§غŒ ظ‡ط± ظپط±ط¯</div>
-      </div>
-      <div class="service-card fade-in">
-        <div class="service-ico">ًں’‘</div>
-        <div class="service-title">ط³ع©ط³ طھط±ط§ظ¾غŒ ط²ظˆط¬غŒظ†</div>
-        <div class="service-desc">ط¨ظ‡ط¨ظˆط¯ ط±ط§ط¨ط·ظ‡ ط¬ظ†ط³غŒ ظˆ ط¹ط§ط·ظپغŒ ط²ظˆط¬â€Œظ‡ط§ ط¯ط± ظپط¶ط§غŒغŒ ط§ظ…ظ† ظˆ ط­ظ…ط§غŒطھع¯ط±</div>
-      </div>
-      <div class="service-card fade-in">
-        <div class="service-ico">ًں§ </div>
-        <div class="service-title">ط±ظˆط§ظ†â€Œط¯ط±ظ…ط§ظ†غŒ ظپط±ط¯غŒ</div>
-        <div class="service-desc">ط¯ط±ظ…ط§ظ† ط§ط¶ط·ط±ط§ط¨طŒ ط§ظپط³ط±ط¯ع¯غŒ ظˆ ظ…ط´ع©ظ„ط§طھ ط±ظˆط§ظ†â€Œط´ظ†ط§ط®طھغŒ ط¨ط§ ط±ظˆط´â€Œظ‡ط§غŒ ظ†ظˆغŒظ†</div>
-      </div>
-      <div class="service-card fade-in">
-        <div class="service-ico">ًں’چ</div>
-        <div class="service-title">ظ…ط´ط§ظˆط±ظ‡ ظ¾غŒط´ ط§ط² ط§ط²ط¯ظˆط§ط¬</div>
-        <div class="service-desc">ط¢ظ…ط§ط¯ع¯غŒ ط¨ط±ط§غŒ غŒع© ط²ظ†ط¯ع¯غŒ ظ…ط´طھط±ع© ط³ط§ظ„ظ…طŒ ط¢ع¯ط§ظ‡ط§ظ†ظ‡ ظˆ ظ¾ط§غŒط¯ط§ط±</div>
-      </div>
-      <div class="service-card fade-in">
-        <div class="service-ico">ًں’»</div>
-        <div class="service-title">ظ…ط´ط§ظˆط±ظ‡ ط¢ظ†ظ„ط§غŒظ†</div>
-        <div class="service-desc">ط¬ظ„ط³ط§طھ ظˆغŒط¯غŒظˆغŒغŒ ط§ظ…ظ† ظˆ ظ…ط­ط±ظ…ط§ظ†ظ‡ ط§ط² ظ‡ط± ع©ط¬ط§ ع©ظ‡ ظ‡ط³طھغŒط¯</div>
-      </div>
-    </div>
-  </div>
-</section>
+                <div class="form-group">
+                  <label for="sessionType">
+                    نوع جلسه <span class="required">*</span>
+                  </label>
+                  <select class="form-control" id="sessionType" name="sessionType" required>
+                    <option value="" selected disabled>انتخاب کنيد</option>
+                    <option value="آنلاين">آنلاين</option>
+                    <option value="حضوري">حضوري</option>
+                  </select>
+                </div>
 
-<!-- HOW IT WORKS -->
-<section class="section section-alt" id="how">
-  <div class="container">
-    <div class="fade-in" style="text-align:center">
-      <span class="section-label">ط´غŒظˆظ‡ ع©ط§ط±</span>
-      <h2 class="section-title">ط´ط±ظˆط¹ ظ…ط³غŒط± ط¯ط±ظ…ط§ظ†</h2>
-      <p class="section-sub" style="margin:0 auto">ط³ظ‡ ظ‚ط¯ظ… ط³ط§ط¯ظ‡ ط¨ط±ط§غŒ ط¢ط؛ط§ط² طھط؛غŒغŒط±</p>
-    </div>
-    <div class="steps">
-      <div class="step fade-in">
-        <div class="step-num">غ±</div>
-        <div class="step-title">ط±ط²ط±ظˆ ظ†ظˆط¨طھ</div>
-        <div class="step-desc">ط§ط² ط·ط±غŒظ‚ ظپط±ظ… ط¢ظ†ظ„ط§غŒظ† غŒط§ طھظ…ط§ط³ ظ…ط³طھظ‚غŒظ…طŒ ظ†ظˆط¨طھ ط®ظˆط¯ ط±ط§ ط±ط²ط±ظˆ ع©ظ†غŒط¯</div>
-      </div>
-      <div class="step fade-in">
-        <div class="step-num">غ²</div>
-        <div class="step-title">ط¬ظ„ط³ظ‡ ط¢ط´ظ†ط§غŒغŒ</div>
-        <div class="step-desc">ط§ظˆظ„غŒظ† ط¬ظ„ط³ظ‡ ط¨ط±ط§غŒ ط¢ط´ظ†ط§غŒغŒ ظˆ ط¨ط±ط±ط³غŒ ظ†غŒط§ط²ظ‡ط§ â€” ط­ط¶ظˆط±غŒ غŒط§ ط¢ظ†ظ„ط§غŒظ†</div>
-      </div>
-      <div class="step fade-in">
-        <div class="step-num">غ³</div>
-        <div class="step-title">ط´ط±ظˆط¹ ط¯ط±ظ…ط§ظ†</div>
-        <div class="step-desc">ط¢ط؛ط§ط² ط¨ط±ظ†ط§ظ…ظ‡ ط¯ط±ظ…ط§ظ†غŒ ط´ط®طµغŒâ€Œط³ط§ط²غŒâ€Œط´ط¯ظ‡ ط¨ط§ ظ‡ظ…ط±ط§ظ‡غŒ ع©ط§ظ…ظ„</div>
-      </div>
-    </div>
-  </div>
-</section>
+                <div class="form-group full">
+                  <label for="description">توضيحات</label>
+                  <textarea
+                    class="form-control"
+                    id="description"
+                    name="description"
+                    placeholder="اگر توضيحي داريد، اينجا بنويسيد..."
+</textarea>
+                </div>
 
-<!-- BOOKING + CONTACT -->
-<section class="section" id="booking">
-  <div class="container">
-    <div class="fade-in" style="text-align:center;margin-bottom:.5rem">
-      <span class="section-label">ط±ط²ط±ظˆ ظ†ظˆط¨طھ</span>
-      <h2 class="section-title">ظ‡ظ…غŒظ† ط§ظ…ط±ظˆط² ط´ط±ظˆط¹ ع©ظ†غŒط¯</h2>
-      <p class="section-sub" style="margin:0 auto">ظپط±ظ… ط²غŒط± ط±ط§ طھع©ظ…غŒظ„ ع©ظ†غŒط¯ غŒط§ ظ…ط³طھظ‚غŒظ… طھظ…ط§ط³ ط¨ع¯غŒط±غŒط¯</p>
-    </div>
-    <div class="booking-grid" id="contact">
-      <!-- FORM -->
-      <div class="form-card fade-in">
-        <div class="form-title">ًں“‹ ظپط±ظ… ط±ط²ط±ظˆ ظ†ظˆط¨طھ</div>
-        <div class="form-group">
-          <label>ظ†ط§ظ… ع©ط§ظ…ظ„ *</label>
-          <input type="text" id="f-name" placeholder="ظ†ط§ظ… ظˆ ظ†ط§ظ… ط®ط§ظ†ظˆط§ط¯ع¯غŒ">
-        </div>
-        <div class="form-group">
-          <label>ط´ظ…ط§ط±ظ‡ طھظ…ط§ط³ *</label>
-          <input type="tel" id="f-phone" placeholder="09XX XXX XXXX">
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>ظ†ظˆط¹ ط®ط¯ظ…طھ</label>
-            <select id="f-service">
-              <option value="">ط§ظ†طھط®ط§ط¨ ع©ظ†غŒط¯</option>
-              <option>ط³ع©ط³ طھط±ط§ظ¾غŒ ظپط±ط¯غŒ</option>
-              <option>ط³ع©ط³ طھط±ط§ظ¾غŒ ط²ظˆط¬غŒظ†</option>
-              <option>ط±ظˆط§ظ†â€Œط¯ط±ظ…ط§ظ†غŒ ظپط±ط¯غŒ</option>
-              <option>ظ…ط´ط§ظˆط±ظ‡ ظ¾غŒط´ ط§ط² ط§ط²ط¯ظˆط§ط¬</option>
-            </select>
+                <div class="form-group full">
+                  <button class="btn btn-primary submit-btn" type="submit">
+                    <span>ارسال درخواست در واتساپ</span>
+                    <span aria-hidden="true">?</span>
+                  </button>
+                </div>
+              </div>
+
+              <p class="form-status" id="formStatus" role="status">
+                در حال انتقال به واتساپ...
+              </p>
+            </form>
           </div>
-          <div class="form-group">
-            <label>ظ†ظˆط¹ ط¬ظ„ط³ظ‡</label>
-            <select id="f-type">
-              <option value="">ط§ظ†طھط®ط§ط¨ ع©ظ†غŒط¯</option>
-              <option>ط¢ظ†ظ„ط§غŒظ† (ظˆغŒط¯غŒظˆ ع©ط§ظ„)</option>
-              <option>ط­ط¶ظˆط±غŒ</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>طھظˆط¶غŒط­ط§طھ (ط§ط®طھغŒط§ط±غŒ)</label>
-          <textarea id="f-note" placeholder="ظ‡ط± طھظˆط¶غŒط­غŒ ع©ظ‡ ظ„ط§ط²ظ… ظ…غŒâ€Œط¯ط§ظ†غŒط¯..."></textarea>
-        </div>
-        <button class="btn-submit" onclick="sendForm()">ًں“¤ ط§ط±ط³ط§ظ„ ط¯ط±ط®ظˆط§ط³طھ</button>
-        <p style="font-size:11px;color:#9ca3af;text-align:center;margin-top:.75rem">ط§ط·ظ„ط§ط¹ط§طھ ط´ظ…ط§ ع©ط§ظ…ظ„ط§ظ‹ ظ…ط­ط±ظ…ط§ظ†ظ‡ ط§ط³طھ ًں”’</p>
-      </div>
 
-      <!-- CONTACT INFO -->
-      <div class="contact-side fade-in">
-        <div class="contact-title">ًں“‍ طھظ…ط§ط³ ظ…ط³طھظ‚غŒظ…</div>
-        <div class="contact-items">
-          <div class="contact-item">
-            <div class="contact-ico">ًں“±</div>
-            <div>
-              <div class="contact-lbl">طھظ„ظپظ† طھظ…ط§ط³</div>
-              <div class="contact-val"><a href="tel:+989XXXXXXXXX">+98 9XX XXX XXXX</a></div>
+          <aside class="direct-contact" id="contact">
+            <h3>تماس مستقيم</h3>
+            <p>
+              براي دريافت اطلاعات بيشتر يا هماهنگي جلسه، از راه‌هاي زير با ما در ارتباط باشيد.
+            </p>
+
+            <a
+              class="contact-item"
+              href="https://wa.me/989930900277"
+              target="_blank"
+              rel="noopener noreferrer"
+<span class="contact-item-icon" aria-hidden="true">??</span>
+              <span>
+                <small>واتساپ</small>
+                <strong>09930900277</strong>
+              </span>
+            </a>
+
+            <a
+              class="contact-item"
+              href="https://www.instagram.com/midwife_izadiii/"
+              target="_blank"
+              rel="noopener noreferrer"
+<span class="contact-item-icon" aria-hidden="true">??</span>
+              <span>
+                <small>اينستاگرام</small>
+                <strong>@midwife_izadiii</strong>
+              </span>
+            </a>
+
+            <div class="privacy-note">
+              <span aria-hidden="true">??</span>
+              <span>تمامي پيام‌ها و اطلاعات شما کاملاً خصوصي و محرمانه خواهند بود.</span>
             </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-ico">ًں’¬</div>
-            <div>
-              <div class="contact-lbl">ظˆط§طھط³ط§ظ¾</div>
-              <div class="contact-val"><a href="https://wa.me/989XXXXXXXXX" target="_blank">+98 9XX XXX XXXX</a></div>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-ico">âœˆï¸ڈ</div>
-            <div>
-              <div class="contact-lbl">طھظ„ع¯ط±ط§ظ…</div>
-              <div class="contact-val"><a href="https://t.me/username" target="_blank">@username</a></div>
-            </div>
-          </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="social">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">شبکه‌هاي اجتماعي</span>
+          <h2>با من در <span class="gradient-text">ارتباط باشيد</span></h2>
+          <p>محتواي آموزشي و اطلاعات تازه را در شبکه‌هاي اجتماعي دنبال کنيد.</p>
         </div>
 
-        <div class="social-title">ط´ط¨ع©ظ‡â€Œظ‡ط§غŒ ط§ط¬طھظ…ط§ط¹غŒ</div>
         <div class="social-grid">
-          <a href="https://instagram.com/midwife_izadiii" target="_blank" class="social-btn s-insta">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            ط§غŒظ†ط³طھط§ع¯ط±ط§ظ…
+          <a
+            class="social-btn instagram reveal"
+            href="https://www.instagram.com/midwife_izadiii/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="اينستاگرام منصوره ايزدي"
+<span class="social-icon" aria-hidden="true">?</span>
+            اينستاگرام
           </a>
-          <a href="https://wa.me/989XXXXXXXXX" target="_blank" class="social-btn s-whatsapp">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            ظˆط§طھط³ط§ظ¾
+
+          <a
+            class="social-btn whatsapp reveal delay-1"
+            href="https://wa.me/989930900277"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="واتساپ منصوره ايزدي"
+<span class="social-icon" aria-hidden="true">?</span>
+            واتساپ
           </a>
-          <a href="https://t.me/username" target="_blank" class="social-btn s-telegram">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-            طھظ„ع¯ط±ط§ظ…
+
+          <a
+            class="social-btn telegram reveal delay-2"
+            href="https://t.me/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="تلگرام"
+<span class="social-icon" aria-hidden="true">?</span>
+            تلگرام
           </a>
-          <a href="https://youtube.com/@username" target="_blank" class="social-btn s-youtube">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
-            غŒظˆطھغŒظˆط¨
+
+          <a
+            class="social-btn youtube reveal delay-3"
+            href="https://www.youtube.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="يوتيوب"
+<span class="social-icon" aria-hidden="true">?</span>
+            يوتيوب
           </a>
         </div>
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>منصوره ايزدي</h3>
+          <p>سکس تراپيست و روان‌درمانگر</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="منوي فوتر">
+          <a href="#about">درباره من</a>
+          <a href="#services">خدمات</a>
+          <a href="#appointment">رزرو نوبت</a>
+          <a href="#contact">تماس</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 1405 منصوره ايزدي — تمامي حقوق محفوظ است</p>
+        <p class="footer-quote">«مشاوره، قدم اول تغيير است.»</p>
+      </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">
-    <img src="logo2.png" alt="M.Izadi Logo">
-  </div>
-  <p class="footer-tagline">آ«ظ…ط´ط§ظˆط±ظ‡طŒ ظ‚ط¯ظ… ط§ظˆظ„ طھط؛غŒغŒط± ط§ط³طھ.آ»</p>
-  <nav class="footer-nav">
-    <a href="#about">ط¯ط±ط¨ط§ط±ظ‡ ظ…ظ†</a>
-    <a href="#services">ط®ط¯ظ…ط§طھ</a>
-    <a href="#how">ط´غŒظˆظ‡ ع©ط§ط±</a>
-    <a href="#booking">ط±ط²ط±ظˆ ظ†ظˆط¨طھ</a>
-    <a href="#contact">طھظ…ط§ط³</a>
-  </nav>
-  <p class="footer-copy">آ© غ±غ´غ°غ´ ظ…ظ†طµظˆط±ظ‡ ط§غŒط²ط¯غŒ â€” طھظ…ط§ظ…غŒ ط­ظ‚ظˆظ‚ ظ…ط­ظپظˆط¸ ط§ط³طھ</p>
-</footer>
+  <a href="#home" class="back-to-top" id="backToTop" aria-label="بازگشت به بالاي صفحه">
+    ?
+  </a>
 
-<script>
-// Mobile menu
-function toggleMenu(){
-  document.getElementById('mobileMenu').classList.toggle('open');
-}
+  <script>
+    "use strict";
 
-// Scroll animations
-var faders = document.querySelectorAll('.fade-in');
-var observer = new IntersectionObserver(function(entries){
-  entries.forEach(function(e){
-    if(e.isIntersecting){ e.target.classList.add('visible'); }
-  });
-},{threshold:0.12});
-faders.forEach(function(el){ observer.observe(el); });
+    const header = document.getElementById("siteHeader");
+    const menuToggle = document.getElementById("menuToggle");
+    const mainNav = document.getElementById("mainNav");
+    const navLinks = document.querySelectorAll(".nav-link");
+    const backToTop = document.getElementById("backToTop");
+    const appointmentForm = document.getElementById("appointmentForm");
+    const formStatus = document.getElementById("formStatus");
 
-// Form â†’ WhatsApp
-function sendForm(){
-  var name = document.getElementById('f-name').value.trim();
-  var phone = document.getElementById('f-phone').value.trim();
-  var service = document.getElementById('f-service').value;
-  var type = document.getElementById('f-type').value;
-  var note = document.getElementById('f-note').value.trim();
-  if(!name){ alert('ظ„ط·ظپط§ظ‹ ظ†ط§ظ… ط®ظˆط¯ ط±ط§ ظˆط§ط±ط¯ ع©ظ†غŒط¯'); return; }
-  if(!phone){ alert('ظ„ط·ظپط§ظ‹ ط´ظ…ط§ط±ظ‡ طھظ…ط§ط³ ط±ط§ ظˆط§ط±ط¯ ع©ظ†غŒط¯'); return; }
-  var msg = 'ًںŒ¸ ط¯ط±ط®ظˆط§ط³طھ ط±ط²ط±ظˆ ظ†ظˆط¨طھ\n\n'
-    + 'ًں‘¤ ظ†ط§ظ…: ' + name + '\n'
-    + 'ًں“± طھظ…ط§ط³: ' + phone + '\n'
-    + (service ? 'ًں’œ ط®ط¯ظ…طھ: ' + service + '\n' : '')
-    + (type ? 'ًں“چ ظ†ظˆط¹ ط¬ظ„ط³ظ‡: ' + type + '\n' : '')
-    + (note ? 'ًں“‌ طھظˆط¶غŒط­ط§طھ: ' + note : '');
-  // â†گ ط´ظ…ط§ط±ظ‡ ظˆط§طھط³ط§ظ¾ ط±ط§ ط§غŒظ†ط¬ط§ ط¬ط§غŒع¯ط²غŒظ† ع©ظ†غŒط¯
-  var waNumber = '09930900277';
-  window.open('https://wa.me/' + waNumber + '?text=' + encodeURIComponent(msg), '_blank');
-}
+    function closeMobileMenu() {
+      menuToggle.classList.remove("active");
+      mainNav.classList.remove("open");
+      document.body.classList.remove("menu-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "باز کردن منو");
+    }
 
-// Smooth nav hide on mobile menu link click
-document.querySelectorAll('.mobile-menu a').forEach(function(a){
-  a.addEventListener('click', function(){ toggleMenu(); });
-});
-</script>
+    menuToggle.addEventListener("click", () => {
+      const isOpen = mainNav.classList.toggle("open");
+
+      menuToggle.classList.toggle("active", isOpen);
+      document.body.classList.toggle("menu-open", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "بستن منو" : "باز کردن منو"
+      );
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", closeMobileMenu);
+    });
+
+    document.addEventListener("click", (event) => {
+      const clickedInsideNav = mainNav.contains(event.target);
+      const clickedToggle = menuToggle.contains(event.target);
+
+      if (
+        mainNav.classList.contains("open") &&
+        !clickedInsideNav &&
+        !clickedToggle
+      ) {
+        closeMobileMenu();
+      }
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 860) {
+        closeMobileMenu();
+      }
+    });
+
+    function handlePageScroll() {
+      const scrollPosition = window.scrollY;
+
+      header.classList.toggle("scrolled", scrollPosition > 10);
+      backToTop.classList.toggle("visible", scrollPosition > 500);
+    }
+
+    window.addEventListener("scroll", handlePageScroll, { passive: true });
+    handlePageScroll();
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.12,
+          rootMargin: "0px 0px -45px 0px"
+        }
+      );
+
+      revealElements.forEach((element) => revealObserver.observe(element));
+    } else {
+      revealElements.forEach((element) => element.classList.add("visible"));
+    }
+
+    const observedSections = document.querySelectorAll(
+      "main section[id], aside[id]"
+    );
+
+    if ("IntersectionObserver" in window) {
+      const navigationObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            navLinks.forEach((link) => {
+              const targetId = link.getAttribute("href").slice(1);
+              link.classList.toggle("active", targetId === entry.target.id);
+            });
+          });
+        },
+        {
+          rootMargin: "-35% 0px -55% 0px",
+          threshold: 0
+        }
+      );
+
+      observedSections.forEach((section) => navigationObserver.observe(section));
+    }
+
+    function convertPersianDigitsToEnglish(value) {
+      const persianDigits = "??????????";
+      return value.replace(/[?-?]/g, (digit) =>
+        persianDigits.indexOf(digit).toString()
+      );
+    }
+
+    appointmentForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (!appointmentForm.checkValidity()) {
+        appointmentForm.reportValidity();
+        return;
+      }
+
+      const fullName = document.getElementById("fullName").value.trim();
+      const phone = convertPersianDigitsToEnglish(
+        document.getElementById("phone").value.trim()
+      );
+      const service = document.getElementById("service").value;
+      const sessionType = document.getElementById("sessionType").value;
+      const description =
+        document.getElementById("description").value.trim() || "بدون توضيحات";
+
+      const message = [
+        "سلام، براي رزرو نوبت پيام مي‌دهم.",
+        "",
+        نام کامل: ${fullName},
+        شماره تماس: ${phone},
+        نوع خدمت: ${service},
+        نوع جلسه: ${sessionType},
+        توضيحات: ${description}
+      ].join("\n");
+
+      const whatsappNumber = "989930900277";
+      const whatsappUrl =
+        https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)};
+
+      formStatus.style.display = "block";
+
+      setTimeout(() => {
+        window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+        formStatus.style.display = "none";
+      }, 350);
+    });
+  </script>
 </body>
 </html>
+`
