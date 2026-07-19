@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ظ…ظ†طµظˆط±ظ‡ ط§غŒط²ط¯غŒ â€” ط³ع©ط³ طھط±ط§ظ¾غŒط³طھ ظˆ ط±ظˆط§ظ†â€Œط¯ط±ظ…ط§ظ†ع¯ط±</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --purple: #7c3aed;
+  --purple-light: #a855f7;
+  --purple-pale: #f3e8ff;
+  --purple-mid: #ede9fe;
+  --gold: #b7862a;
+  --dark: #1f1235;
+  --gray: #6b7280;
+  --gray-light: #f9fafb;
+  --white: #ffffff;
+  --radius: 16px;
+  --shadow: 0 4px 24px rgba(124,58,237,.12);
+  --shadow-lg: 0 8px 40px rgba(124,58,237,.18);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Vazirmatn', sans-serif; color: var(--dark); background: var(--white); overflow-x: hidden; }
+
+/* â”€â”€ NAVBAR â”€â”€ */
+nav {
+  position: fixed; top: 0; right: 0; left: 0; z-index: 100;
+  background: rgba(255,255,255,.95); backdrop-filter: blur(12px);
+  border-bottom: 1px solid #ede9fe;
+  padding: 0 2rem; height: 70px;
+  display: flex; align-items: center; justify-content: space-between;
+  box-shadow: 0 2px 16px rgba(124,58,237,.07);
+}
+.nav-logo { display: flex; align-items: center; gap: .75rem; }
+.nav-logo img { height: 48px; object-fit: contain; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { text-decoration: none; color: var(--dark); font-size: 14px; font-weight: 500; transition: color .2s; }
+.nav-links a:hover { color: var(--purple); }
+.nav-cta {
+  background: var(--purple); color: var(--white); border: none;
+  padding: .6rem 1.5rem; border-radius: 25px; font-size: 14px;
+  font-weight: 600; cursor: pointer; font-family: inherit;
+  transition: transform .15s, box-shadow .15s;
+  text-decoration: none; display: inline-block;
+}
+.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(124,58,237,.35); }
+.hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+.hamburger span { width: 24px; height: 2px; background: var(--purple); border-radius: 2px; display: block; transition: all .3s; }
+.mobile-menu { display: none; position: fixed; inset: 70px 0 0; background: #fff; z-index: 99; padding: 2rem; flex-direction: column; gap: 1.5rem; }
+.mobile-menu.open { display: flex; }
+.mobile-menu a { text-decoration: none; color: var(--dark); font-size: 16px; font-weight: 500; padding: .75rem 0; border-bottom: 1px solid #f3e8ff; }
+
+/* â”€â”€ HERO â”€â”€ */
+.hero {
+  min-height: 100vh; padding: 100px 2rem 4rem;
+  background: linear-gradient(135deg, #faf5ff 0%, #ede9fe 40%, #fff 100%);
+  display: flex; align-items: center;
+}
+.hero-inner {
+  max-width: 1100px; margin: 0 auto; width: 100%;
+  display: grid; grid-template-columns: 1fr 420px; gap: 4rem; align-items: center;
+}
+.hero-text {}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: var(--purple-pale); color: var(--purple);
+  padding: .4rem 1rem; border-radius: 25px; font-size: 13px; font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+.hero-badge::before { content: 'ًںŒ¸'; }
+.hero-title {
+  font-size: clamp(28px, 4vw, 48px); font-weight: 800;
+  line-height: 1.35; margin-bottom: 1.25rem; color: var(--dark);
+}
+.hero-title span { color: var(--purple); }
+.hero-sub {
+  font-size: 16px; color: var(--gray); line-height: 1.8;
+  margin-bottom: 2rem; max-width: 520px;
+}
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--purple); color: #fff; padding: .85rem 2rem;
+  border-radius: 30px; font-size: 15px; font-weight: 600;
+  text-decoration: none; display: inline-block;
+  transition: transform .15s, box-shadow .15s;
+  font-family: inherit; border: none; cursor: pointer;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(124,58,237,.35); }
+.btn-outline {
+  border: 2px solid var(--purple); color: var(--purple);
+  padding: .8rem 2rem; border-radius: 30px; font-size: 15px; font-weight: 600;
+  text-decoration: none; display: inline-block;
+  transition: all .15s; font-family: inherit; background: transparent; cursor: pointer;
+}
+.btn-outline:hover { background: var(--purple); color: #fff; }
+.hero-img-wrap {
+  position: relative; display: flex; justify-content: center;
+}
+.hero-img-wrap::before {
+  content: ''; position: absolute;
+  width: 360px; height: 360px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%);
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  z-index: 0; opacity: .12;
+}
+.hero-img-wrap::after {
+  content: ''; position: absolute;
+  width: 320px; height: 320px; border-radius: 50%;
+  border: 3px solid var(--purple-light);
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  z-index: 0; opacity: .4;
+}
+.hero-img {
+  width: 340px; height: 400px; object-fit: cover; object-position: top;
+  border-radius: 50% 50% 48% 52% / 55% 55% 45% 45%;
+  position: relative; z-index: 1;
+  box-shadow: 0 20px 60px rgba(124,58,237,.25);
+  border: 4px solid #fff;
+}
+.hero-stats {
+  display: flex; gap: 2rem; margin-top: 2.5rem; flex-wrap: wrap;
+}
+.stat { text-align: center; }
+.stat-num { font-size: 24px; font-weight: 800; color: var(--purple); }
+.stat-lbl { font-size: 12px; color: var(--gray); margin-top: 2px; }
+
+/* â”€â”€ SECTIONS â”€â”€ */
+.section { padding: 5rem 2rem; }
+.section-alt { background: var(--gray-light); }
+.container { max-width: 1100px; margin: 0 auto; }
+.section-label {
+  display: inline-block; background: var(--purple-pale); color: var(--purple);
+  padding: .3rem .9rem; border-radius: 20px; font-size: 12px; font-weight: 600;
+  margin-bottom: .75rem; letter-spacing: .5px;
+}
+.section-title {
+  font-size: clamp(22px, 3vw, 36px); font-weight: 800;
+  color: var(--dark); margin-bottom: .75rem; line-height: 1.3;
+}
+.section-sub { font-size: 15px; color: var(--gray); line-height: 1.8; max-width: 600px; }
+
+/* â”€â”€ ABOUT â”€â”€ */
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem;
+}
+.about-img-side { position: relative; }
+.about-img {
+  width: 100%; border-radius: 24px;
+  box-shadow: var(--shadow-lg);
+  object-fit: cover; object-position: top; max-height: 480px;
+}
+.about-badge {
+  position: absolute; bottom: -1rem; right: -1rem;
+  background: var(--purple); color: #fff;
+  padding: 1rem 1.5rem; border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+.about-badge-num { font-size: 28px; font-weight: 800; }
+.about-badge-lbl { font-size: 12px; opacity: .85; }
+.about-text { font-size: 15px; color: var(--gray); line-height: 2; margin-bottom: 1.5rem; }
+.about-features { display: flex; flex-direction: column; gap: .75rem; }
+.feature-item {
+  display: flex; align-items: center; gap: .75rem;
+  font-size: 14px; color: var(--dark); font-weight: 500;
+}
+.feature-item::before {
+  content: 'âœ“'; width: 24px; height: 24px; border-radius: 50%;
+  background: var(--purple-pale); color: var(--purple);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 700; flex-shrink: 0;
+}
+
+/* â”€â”€ SERVICES â”€â”€ */
+.services-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem; margin-top: 3rem;
+}
+.service-card {
+  background: #fff; border: 1px solid #ede9fe;
+  border-radius: 20px; padding: 1.75rem 1.5rem;
+  transition: transform .2s, box-shadow .2s;
+  cursor: default; text-align: center;
+}
+.service-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.service-ico { font-size: 2.5rem; margin-bottom: 1rem; }
+.service-title { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: .5rem; }
+.service-desc { font-size: 13px; color: var(--gray); line-height: 1.7; }
+
+/* â”€â”€ HOW IT WORKS â”€â”€ */
+.steps { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin-top: 3rem; }
+.step { text-align: center; padding: 2rem 1.5rem; }
+.step-num {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--purple); color: #fff;
+  font-size: 20px; font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.25rem;
+}
+.step-title { font-size: 16px; font-weight: 700; margin-bottom: .5rem; }
+.step-desc { font-size: 13px; color: var(--gray); line-height: 1.7; }
+
+/* â”€â”€ BOOKING / CONTACT â”€â”€ */
+.booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
+.form-card {
+  background: #fff; border-radius: 24px;
+  padding: 2rem; box-shadow: var(--shadow);
+}
+.form-title { font-size: 18px; font-weight: 700; margin-bottom: 1.5rem; color: var(--dark); }
+.form-group { margin-bottom: 1rem; }
+.form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--dark); margin-bottom: .4rem; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%; padding: .75rem 1rem;
+  border: 1.5px solid #e5e7eb; border-radius: 12px;
+  font-size: 14px; font-family: inherit; color: var(--dark);
+  transition: border-color .15s; background: #fafafa; outline: none;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--purple); background: #fff; }
+.form-group textarea { height: 100px; resize: vertical; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+.btn-submit {
+  width: 100%; padding: .875rem;
+  background: var(--purple); color: #fff;
+  border: none; border-radius: 12px;
+  font-size: 15px; font-weight: 700;
+  font-family: inherit; cursor: pointer;
+  transition: transform .15s, box-shadow .15s; margin-top: .5rem;
+}
+.btn-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(124,58,237,.35); }
+.contact-side {}
+.contact-title { font-size: 18px; font-weight: 700; margin-bottom: 1.5rem; color: var(--dark); }
+.contact-items { display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem; }
+.contact-item {
+  display: flex; align-items: center; gap: 1rem;
+  background: #fff; border: 1px solid #ede9fe;
+  border-radius: 14px; padding: 1rem 1.25rem;
+}
+.contact-ico { font-size: 1.5rem; flex-shrink: 0; }
+.contact-lbl { font-size: 11px; color: var(--gray); margin-bottom: 2px; }
+.contact-val { font-size: 14px; font-weight: 600; color: var(--dark); }
+.contact-val a { color: var(--purple); text-decoration: none; }
+.social-title { font-size: 14px; font-weight: 700; margin-bottom: 1rem; color: var(--dark); }
+.social-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+.social-btn {
+  display: flex; align-items: center; gap: .625rem;
+  padding: .75rem 1rem; border-radius: 12px;
+  font-size: 13px; font-weight: 600; text-decoration: none;
+  transition: transform .15s, opacity .15s; font-family: inherit;
+  border: none; cursor: pointer;
+}
+.social-btn:hover { transform: translateY(-2px); opacity: .9; }
+.s-insta { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); color: #fff; }
+.s-whatsapp { background: #25d366; color: #fff; }
+.s-telegram { background: #0088cc; color: #fff; }
+.s-youtube { background: #ff0000; color: #fff; }
+
+/* â”€â”€ FOOTER â”€â”€ */
+footer {
+  background: var(--dark); color: rgba(255,255,255,.7);
+  padding: 3rem 2rem 1.5rem; text-align: center;
+}
+.footer-logo { margin-bottom: 1rem; }
+.footer-logo img { height: 52px; opacity: .85; }
+.footer-tagline { font-size: 15px; color: rgba(255,255,255,.85); margin-bottom: 1.5rem; font-weight: 500; }
+.footer-nav { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+.footer-nav a { color: rgba(255,255,255,.6); text-decoration: none; font-size: 13px; transition: color .15s; }
+.footer-nav a:hover { color: var(--purple-light); }
+.footer-copy { font-size: 12px; border-top: 1px solid rgba(255,255,255,.1); padding-top: 1.25rem; margin-top: .5rem; }
+
+/* â”€â”€ ANIMATIONS â”€â”€ */
+.fade-in { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* â”€â”€ RESPONSIVE â”€â”€ */
+@media (max-width: 900px) {
+  .hero-inner { grid-template-columns: 1fr; text-align: center; gap: 2.5rem; }
+  .hero-img-wrap { order: -1; }
+  .hero-img { width: 260px; height: 300px; }
+  .hero-img-wrap::before { width: 280px; height: 280px; }
+  .hero-img-wrap::after { width: 250px; height: 250px; }
+  .hero-stats { justify-content: center; }
+  .hero-btns { justify-content: center; }
+  .hero-sub { margin: 0 auto 2rem; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-badge { right: 1rem; }
+  .steps { grid-template-columns: 1fr; }
+  .booking-grid { grid-template-columns: 1fr; }
+  .nav-links, .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  nav { padding: 0 1rem; }
+  .section { padding: 3.5rem 1.25rem; }
+  .hero { padding: 90px 1.25rem 3rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .social-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-logo">
+    <img src="logo2.png" alt="M.Izadi Sex Therapist Logo">
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">ط¯ط±ط¨ط§ط±ظ‡ ظ…ظ†</a></li>
+    <li><a href="#services">ط®ط¯ظ…ط§طھ</a></li>
+    <li><a href="#how">ط´غŒظˆظ‡ ع©ط§ط±</a></li>
+    <li><a href="#booking">ط±ط²ط±ظˆ ظ†ظˆط¨طھ</a></li>
+    <li><a href="#contact">طھظ…ط§ط³</a></li>
+  </ul>
+  <a href="#booking" class="nav-cta">ط±ط²ط±ظˆ ظ†ظˆط¨طھ</a>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="ظ…ظ†ظˆ">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMenu()">ط¯ط±ط¨ط§ط±ظ‡ ظ…ظ†</a>
+  <a href="#services" onclick="toggleMenu()">ط®ط¯ظ…ط§طھ</a>
+  <a href="#how" onclick="toggleMenu()">ط´غŒظˆظ‡ ع©ط§ط±</a>
+  <a href="#booking" onclick="toggleMenu()">ط±ط²ط±ظˆ ظ†ظˆط¨طھ</a>
+  <a href="#contact" onclick="toggleMenu()">طھظ…ط§ط³</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner container">
+    <div class="hero-text">
+      <div class="hero-badge">ط³ع©ط³ طھط±ط§ظ¾غŒط³طھ ظˆ ط±ظˆط§ظ†â€Œط¯ط±ظ…ط§ظ†ع¯ط±</div>
+      <h1 class="hero-title">
+        ط³ظ„ط§ظ…طھ ط¬ظ†ط³غŒطŒ<br>
+        <span>ط­ظ‚ ط·ط¨غŒط¹غŒ طھظˆط³طھ</span>
+      </h1>
+      <p class="hero-sub">
+        ط¯ط± ظپط¶ط§غŒغŒ ط§ظ…ظ†طŒ ظ…ط­ط±ظ…ط§ظ†ظ‡ ظˆ ط¨ط¯ظˆظ† ظ‚ط¶ط§ظˆطھطŒ<br>
+        ظ…ط³غŒط± طھط؛غŒغŒط± ط±ط§ ط¨ط§ ظ…ظ†طµظˆط±ظ‡ ط§غŒط²ط¯غŒ ط¢ط؛ط§ط² ع©ظ†.
+      </p>
+      <div class="hero-btns">
+        <a href="#booking" class="btn-primary">ًں“… ط±ط²ط±ظˆ ظ†ظˆط¨طھ</a>
+        <a href="#about" class="btn-outline">ط¨غŒط´طھط± ط¨ط¯ط§ظ†غŒط¯</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">+غµغ°غ°</div><div class="stat-lbl">ظ…ط±ط§ط¬ط¹ ظ…ظˆظپظ‚</div></div>
+        <div class="stat"><div class="stat-num">+غ±غ°</div><div class="stat-lbl">ط³ط§ظ„ طھط¬ط±ط¨ظ‡</div></div>
+        <div class="stat"><div class="stat-num">غ±غ°غ°ظھ</div><div class="stat-lbl">ظ…ط­ط±ظ…ط§ظ†ظ‡</div></div>
+      </div>
+    </div>
+    <div class="hero-img-wrap">
+      <img src="photo.jpg" alt="ظ…ظ†طµظˆط±ظ‡ ط§غŒط²ط¯غŒ" class="hero-img">
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section section-alt" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-side fade-in">
+        <img src="photo.jpg" alt="ظ…ظ†طµظˆط±ظ‡ ط§غŒط²ط¯غŒ" class="about-img">
+        <div class="about-badge">
+          <div class="about-badge-num">+غ±غ°</div>
+          <div class="about-badge-lbl">ط³ط§ظ„ طھط¬ط±ط¨ظ‡</div>
+        </div>
+      </div>
+      <div class="fade-in">
+        <span class="section-label">ط¯ط±ط¨ط§ط±ظ‡ ظ…ظ†</span>
+        <h2 class="section-title">ظ…ظ†طµظˆط±ظ‡ ط§غŒط²ط¯غŒ</h2>
+        <p class="section-sub" style="margin-bottom:1.5rem">ط³ع©ط³ طھط±ط§ظ¾غŒط³طھ ظˆ ط±ظˆط§ظ†â€Œط¯ط±ظ…ط§ظ†ع¯ط±</p>
+        <p class="about-text">
+          ظ…ظ†طµظˆط±ظ‡ ط§غŒط²ط¯غŒطŒ ط³ع©ط³ طھط±ط§ظ¾غŒط³طھ ظˆ ط±ظˆط§ظ†â€Œط¯ط±ظ…ط§ظ†ع¯ط± ط¨ط§ ط³ط§ظ„â€Œظ‡ط§ طھط¬ط±ط¨ظ‡ ط¯ط± ط­ظˆط²ظ‡ ط³ظ„ط§ظ…طھ ط¬ظ†ط³غŒ ظˆ ط±ظˆط§ظ†â€Œط´ظ†ط§ط³غŒ ط¨ط§ظ„غŒظ†غŒطŒ ط¨ط§ ط±ظˆغŒع©ط±ط¯غŒ ط¹ظ„ظ…غŒطŒ ظ‡ظ…ط¯ظ„ط§ظ†ظ‡ ظˆ ع©ط§ظ…ظ„ط§ظ‹ ظ…ط­ط±ظ…ط§ظ†ظ‡ ط¯ط± ع©ظ†ط§ط± ط´ظ…ط§ط³طھ.
+        </p>
+        <p class="about-text">
+          ط§ظˆ ط¨ط§ طھط®طµطµ ط¯ط± ط³ع©ط³ طھط±ط§ظ¾غŒ ظپط±ط¯غŒ ظˆ ط²ظˆط¬غŒظ†طŒ ط±ظˆط§ظ†â€Œط¯ط±ظ…ط§ظ†غŒطŒ ظˆ ظ…ط´ط§ظˆط±ظ‡ ظ¾غŒط´ ط§ط² ط§ط²ط¯ظˆط§ط¬طŒ ط¨ظ‡ ط§ظپط±ط§ط¯ ظˆ ط²ظˆط¬â€Œظ‡ط§غŒغŒ ع©ظ…ع© ظ…غŒâ€Œع©ظ†ط¯ ع©ظ‡ ظ…غŒâ€Œط®ظˆط§ظ‡ظ†ط¯ ع©غŒظپغŒطھ ط²ظ†ط¯ع¯غŒ ط¬ظ†ط³غŒ ظˆ ط¹ط§ط·ظپغŒ ط®ظˆط¯ ط±ط§ ط¨ظ‡ط¨ظˆط¯ ط¨ط®ط´ظ†ط¯. ظپط¶ط§غŒ ظ…ط´ط§ظˆط±ظ‡طŒ ط§ظ…ظ†طŒ ط¨ط¯ظˆظ† ظ‚ط¶ط§ظˆطھ ظˆ ع©ط§ظ…ظ„ط§ظ‹ ط®طµظˆطµغŒ ط§ط³طھ.
+        </p>
+        <div class="about-features">
+          <div class="feature-item">ط±ظˆغŒع©ط±ط¯ ط¹ظ„ظ…غŒ ظˆ ظ…ط¨طھظ†غŒ ط¨ط± ط´ظˆط§ظ‡ط¯</div>
+          <div class="feature-item">ظپط¶ط§غŒ ع©ط§ظ…ظ„ط§ظ‹ ط§ظ…ظ† ظˆ ط¨ط¯ظˆظ† ظ‚ط¶ط§ظˆطھ</div>
+          <div class="feature-item">ظ…ط´ط§ظˆط±ظ‡ ط¢ظ†ظ„ط§غŒظ† ظˆ ط­ط¶ظˆط±غŒ</div>
+          <div class="feature-item">ظ…ط­ط±ظ…ط§ظ†ع¯غŒ ع©ط§ظ…ظ„ ط¬ظ„ط³ط§طھ</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="fade-in" style="text-align:center;margin-bottom:.5rem">
+      <span class="section-label">ط®ط¯ظ…ط§طھ</span>
+      <h2 class="section-title">ع†ظ‡ ع©ظ…ع©غŒ ظ…غŒâ€Œطھظˆط§ظ†ظ… ط¨ع©ظ†ظ…طں</h2>
+      <p class="section-sub" style="margin:0 auto">ط®ط¯ظ…ط§طھ طھط®طµطµغŒ ط¯ط± ط­ظˆط²ظ‡ ط³ظ„ط§ظ…طھ ط¬ظ†ط³غŒ ظˆ ط±ظˆط§ظ†â€Œط¯ط±ظ…ط§ظ†غŒ</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-ico">ًں’œ</div>
+        <div class="service-title">ط³ع©ط³ طھط±ط§ظ¾غŒ ظپط±ط¯غŒ</div>
+        <div class="service-desc">ط¨ط±ط±ط³غŒ ظˆ ط¯ط±ظ…ط§ظ† ظ…ط´ع©ظ„ط§طھ ط¬ظ†ط³غŒ ط¨ط§ ط±ظˆغŒع©ط±ط¯ ط¹ظ„ظ…غŒ ظˆ ط´ط®طµغŒâ€Œط³ط§ط²غŒâ€Œط´ط¯ظ‡ ط¨ط±ط§غŒ ظ‡ط± ظپط±ط¯</div>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-ico">ًں’‘</div>
+        <div class="service-title">ط³ع©ط³ طھط±ط§ظ¾غŒ ط²ظˆط¬غŒظ†</div>
+        <div class="service-desc">ط¨ظ‡ط¨ظˆط¯ ط±ط§ط¨ط·ظ‡ ط¬ظ†ط³غŒ ظˆ ط¹ط§ط·ظپغŒ ط²ظˆط¬â€Œظ‡ط§ ط¯ط± ظپط¶ط§غŒغŒ ط§ظ…ظ† ظˆ ط­ظ…ط§غŒطھع¯ط±</div>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-ico">ًں§ </div>
+        <div class="service-title">ط±ظˆط§ظ†â€Œط¯ط±ظ…ط§ظ†غŒ ظپط±ط¯غŒ</div>
+        <div class="service-desc">ط¯ط±ظ…ط§ظ† ط§ط¶ط·ط±ط§ط¨طŒ ط§ظپط³ط±ط¯ع¯غŒ ظˆ ظ…ط´ع©ظ„ط§طھ ط±ظˆط§ظ†â€Œط´ظ†ط§ط®طھغŒ ط¨ط§ ط±ظˆط´â€Œظ‡ط§غŒ ظ†ظˆغŒظ†</div>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-ico">ًں’چ</div>
+        <div class="service-title">ظ…ط´ط§ظˆط±ظ‡ ظ¾غŒط´ ط§ط² ط§ط²ط¯ظˆط§ط¬</div>
+        <div class="service-desc">ط¢ظ…ط§ط¯ع¯غŒ ط¨ط±ط§غŒ غŒع© ط²ظ†ط¯ع¯غŒ ظ…ط´طھط±ع© ط³ط§ظ„ظ…طŒ ط¢ع¯ط§ظ‡ط§ظ†ظ‡ ظˆ ظ¾ط§غŒط¯ط§ط±</div>
+      </div>
+      <div class="service-card fade-in">
+        <div class="service-ico">ًں’»</div>
+        <div class="service-title">ظ…ط´ط§ظˆط±ظ‡ ط¢ظ†ظ„ط§غŒظ†</div>
+        <div class="service-desc">ط¬ظ„ط³ط§طھ ظˆغŒط¯غŒظˆغŒغŒ ط§ظ…ظ† ظˆ ظ…ط­ط±ظ…ط§ظ†ظ‡ ط§ط² ظ‡ط± ع©ط¬ط§ ع©ظ‡ ظ‡ط³طھغŒط¯</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section-alt" id="how">
+  <div class="container">
+    <div class="fade-in" style="text-align:center">
+      <span class="section-label">ط´غŒظˆظ‡ ع©ط§ط±</span>
+      <h2 class="section-title">ط´ط±ظˆط¹ ظ…ط³غŒط± ط¯ط±ظ…ط§ظ†</h2>
+      <p class="section-sub" style="margin:0 auto">ط³ظ‡ ظ‚ط¯ظ… ط³ط§ط¯ظ‡ ط¨ط±ط§غŒ ط¢ط؛ط§ط² طھط؛غŒغŒط±</p>
+    </div>
+    <div class="steps">
+      <div class="step fade-in">
+        <div class="step-num">غ±</div>
+        <div class="step-title">ط±ط²ط±ظˆ ظ†ظˆط¨طھ</div>
+        <div class="step-desc">ط§ط² ط·ط±غŒظ‚ ظپط±ظ… ط¢ظ†ظ„ط§غŒظ† غŒط§ طھظ…ط§ط³ ظ…ط³طھظ‚غŒظ…طŒ ظ†ظˆط¨طھ ط®ظˆط¯ ط±ط§ ط±ط²ط±ظˆ ع©ظ†غŒط¯</div>
+      </div>
+      <div class="step fade-in">
+        <div class="step-num">غ²</div>
+        <div class="step-title">ط¬ظ„ط³ظ‡ ط¢ط´ظ†ط§غŒغŒ</div>
+        <div class="step-desc">ط§ظˆظ„غŒظ† ط¬ظ„ط³ظ‡ ط¨ط±ط§غŒ ط¢ط´ظ†ط§غŒغŒ ظˆ ط¨ط±ط±ط³غŒ ظ†غŒط§ط²ظ‡ط§ â€” ط­ط¶ظˆط±غŒ غŒط§ ط¢ظ†ظ„ط§غŒظ†</div>
+      </div>
+      <div class="step fade-in">
+        <div class="step-num">غ³</div>
+        <div class="step-title">ط´ط±ظˆط¹ ط¯ط±ظ…ط§ظ†</div>
+        <div class="step-desc">ط¢ط؛ط§ط² ط¨ط±ظ†ط§ظ…ظ‡ ط¯ط±ظ…ط§ظ†غŒ ط´ط®طµغŒâ€Œط³ط§ط²غŒâ€Œط´ط¯ظ‡ ط¨ط§ ظ‡ظ…ط±ط§ظ‡غŒ ع©ط§ظ…ظ„</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING + CONTACT -->
+<section class="section" id="booking">
+  <div class="container">
+    <div class="fade-in" style="text-align:center;margin-bottom:.5rem">
+      <span class="section-label">ط±ط²ط±ظˆ ظ†ظˆط¨طھ</span>
+      <h2 class="section-title">ظ‡ظ…غŒظ† ط§ظ…ط±ظˆط² ط´ط±ظˆط¹ ع©ظ†غŒط¯</h2>
+      <p class="section-sub" style="margin:0 auto">ظپط±ظ… ط²غŒط± ط±ط§ طھع©ظ…غŒظ„ ع©ظ†غŒط¯ غŒط§ ظ…ط³طھظ‚غŒظ… طھظ…ط§ط³ ط¨ع¯غŒط±غŒط¯</p>
+    </div>
+    <div class="booking-grid" id="contact">
+      <!-- FORM -->
+      <div class="form-card fade-in">
+        <div class="form-title">ًں“‹ ظپط±ظ… ط±ط²ط±ظˆ ظ†ظˆط¨طھ</div>
+        <div class="form-group">
+          <label>ظ†ط§ظ… ع©ط§ظ…ظ„ *</label>
+          <input type="text" id="f-name" placeholder="ظ†ط§ظ… ظˆ ظ†ط§ظ… ط®ط§ظ†ظˆط§ط¯ع¯غŒ">
+        </div>
+        <div class="form-group">
+          <label>ط´ظ…ط§ط±ظ‡ طھظ…ط§ط³ *</label>
+          <input type="tel" id="f-phone" placeholder="09XX XXX XXXX">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>ظ†ظˆط¹ ط®ط¯ظ…طھ</label>
+            <select id="f-service">
+              <option value="">ط§ظ†طھط®ط§ط¨ ع©ظ†غŒط¯</option>
+              <option>ط³ع©ط³ طھط±ط§ظ¾غŒ ظپط±ط¯غŒ</option>
+              <option>ط³ع©ط³ طھط±ط§ظ¾غŒ ط²ظˆط¬غŒظ†</option>
+              <option>ط±ظˆط§ظ†â€Œط¯ط±ظ…ط§ظ†غŒ ظپط±ط¯غŒ</option>
+              <option>ظ…ط´ط§ظˆط±ظ‡ ظ¾غŒط´ ط§ط² ط§ط²ط¯ظˆط§ط¬</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>ظ†ظˆط¹ ط¬ظ„ط³ظ‡</label>
+            <select id="f-type">
+              <option value="">ط§ظ†طھط®ط§ط¨ ع©ظ†غŒط¯</option>
+              <option>ط¢ظ†ظ„ط§غŒظ† (ظˆغŒط¯غŒظˆ ع©ط§ظ„)</option>
+              <option>ط­ط¶ظˆط±غŒ</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>طھظˆط¶غŒط­ط§طھ (ط§ط®طھغŒط§ط±غŒ)</label>
+          <textarea id="f-note" placeholder="ظ‡ط± طھظˆط¶غŒط­غŒ ع©ظ‡ ظ„ط§ط²ظ… ظ…غŒâ€Œط¯ط§ظ†غŒط¯..."></textarea>
+        </div>
+        <button class="btn-submit" onclick="sendForm()">ًں“¤ ط§ط±ط³ط§ظ„ ط¯ط±ط®ظˆط§ط³طھ</button>
+        <p style="font-size:11px;color:#9ca3af;text-align:center;margin-top:.75rem">ط§ط·ظ„ط§ط¹ط§طھ ط´ظ…ط§ ع©ط§ظ…ظ„ط§ظ‹ ظ…ط­ط±ظ…ط§ظ†ظ‡ ط§ط³طھ ًں”’</p>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="contact-side fade-in">
+        <div class="contact-title">ًں“‍ طھظ…ط§ط³ ظ…ط³طھظ‚غŒظ…</div>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-ico">ًں“±</div>
+            <div>
+              <div class="contact-lbl">طھظ„ظپظ† طھظ…ط§ط³</div>
+              <div class="contact-val"><a href="tel:+989XXXXXXXXX">+98 9XX XXX XXXX</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-ico">ًں’¬</div>
+            <div>
+              <div class="contact-lbl">ظˆط§طھط³ط§ظ¾</div>
+              <div class="contact-val"><a href="https://wa.me/989XXXXXXXXX" target="_blank">+98 9XX XXX XXXX</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-ico">âœˆï¸ڈ</div>
+            <div>
+              <div class="contact-lbl">طھظ„ع¯ط±ط§ظ…</div>
+              <div class="contact-val"><a href="https://t.me/username" target="_blank">@username</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-title">ط´ط¨ع©ظ‡â€Œظ‡ط§غŒ ط§ط¬طھظ…ط§ط¹غŒ</div>
+        <div class="social-grid">
+          <a href="https://instagram.com/midwife_izadiii" target="_blank" class="social-btn s-insta">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            ط§غŒظ†ط³طھط§ع¯ط±ط§ظ…
+          </a>
+          <a href="https://wa.me/989XXXXXXXXX" target="_blank" class="social-btn s-whatsapp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            ظˆط§طھط³ط§ظ¾
+          </a>
+          <a href="https://t.me/username" target="_blank" class="social-btn s-telegram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            طھظ„ع¯ط±ط§ظ…
+          </a>
+          <a href="https://youtube.com/@username" target="_blank" class="social-btn s-youtube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+            غŒظˆطھغŒظˆط¨
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <img src="logo2.png" alt="M.Izadi Logo">
+  </div>
+  <p class="footer-tagline">آ«ظ…ط´ط§ظˆط±ظ‡طŒ ظ‚ط¯ظ… ط§ظˆظ„ طھط؛غŒغŒط± ط§ط³طھ.آ»</p>
+  <nav class="footer-nav">
+    <a href="#about">ط¯ط±ط¨ط§ط±ظ‡ ظ…ظ†</a>
+    <a href="#services">ط®ط¯ظ…ط§طھ</a>
+    <a href="#how">ط´غŒظˆظ‡ ع©ط§ط±</a>
+    <a href="#booking">ط±ط²ط±ظˆ ظ†ظˆط¨طھ</a>
+    <a href="#contact">طھظ…ط§ط³</a>
+  </nav>
+  <p class="footer-copy">آ© غ±غ´غ°غ´ ظ…ظ†طµظˆط±ظ‡ ط§غŒط²ط¯غŒ â€” طھظ…ط§ظ…غŒ ط­ظ‚ظˆظ‚ ظ…ط­ظپظˆط¸ ط§ط³طھ</p>
+</footer>
+
+<script>
+// Mobile menu
+function toggleMenu(){
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
+
+// Scroll animations
+var faders = document.querySelectorAll('.fade-in');
+var observer = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){ e.target.classList.add('visible'); }
+  });
+},{threshold:0.12});
+faders.forEach(function(el){ observer.observe(el); });
+
+// Form â†’ WhatsApp
+function sendForm(){
+  var name = document.getElementById('f-name').value.trim();
+  var phone = document.getElementById('f-phone').value.trim();
+  var service = document.getElementById('f-service').value;
+  var type = document.getElementById('f-type').value;
+  var note = document.getElementById('f-note').value.trim();
+  if(!name){ alert('ظ„ط·ظپط§ظ‹ ظ†ط§ظ… ط®ظˆط¯ ط±ط§ ظˆط§ط±ط¯ ع©ظ†غŒط¯'); return; }
+  if(!phone){ alert('ظ„ط·ظپط§ظ‹ ط´ظ…ط§ط±ظ‡ طھظ…ط§ط³ ط±ط§ ظˆط§ط±ط¯ ع©ظ†غŒط¯'); return; }
+  var msg = 'ًںŒ¸ ط¯ط±ط®ظˆط§ط³طھ ط±ط²ط±ظˆ ظ†ظˆط¨طھ\n\n'
+    + 'ًں‘¤ ظ†ط§ظ…: ' + name + '\n'
+    + 'ًں“± طھظ…ط§ط³: ' + phone + '\n'
+    + (service ? 'ًں’œ ط®ط¯ظ…طھ: ' + service + '\n' : '')
+    + (type ? 'ًں“چ ظ†ظˆط¹ ط¬ظ„ط³ظ‡: ' + type + '\n' : '')
+    + (note ? 'ًں“‌ طھظˆط¶غŒط­ط§طھ: ' + note : '');
+  // â†گ ط´ظ…ط§ط±ظ‡ ظˆط§طھط³ط§ظ¾ ط±ط§ ط§غŒظ†ط¬ط§ ط¬ط§غŒع¯ط²غŒظ† ع©ظ†غŒط¯
+  var waNumber = '09930900277';
+  window.open('https://wa.me/' + waNumber + '?text=' + encodeURIComponent(msg), '_blank');
+}
+
+// Smooth nav hide on mobile menu link click
+document.querySelectorAll('.mobile-menu a').forEach(function(a){
+  a.addEventListener('click', function(){ toggleMenu(); });
+});
+</script>
+</body>
+</html>
